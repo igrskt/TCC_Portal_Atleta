@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Portal Atleta</title>
+    <link rel="stylesheet" href="loginAtleta.css">
+</head>
+
+<body class="imgBack">
+    <div id="bnt-voltar">
+        <a href="loginCentral.html">Voltar</a>
+    </div>
+    
+    <div id="backgroundImage"> </div>
+    <div id="form">
+        <form action="">
+            <h2 class="title">Cadastro de Atleta</h2>
+
+            <label for="username">Nome</label>
+            <div class="input">
+                <input id="username" name="username" placeholder="Username" type="text"> 
+            </div>
+            
+            <label for="email">E-mail</label>
+            <div class="input">
+                <input id="email" name="email" placeholder="Email" type="text">
+            </div>
+
+            <label for="senha">Senha</label>
+            <div class="input">
+                <input id="senha" name="senha" placeholder="Password" type="password">
+            </div>
+
+            <label for="Esportes">Escolha um esporte:</label>
+            <div class="selectSports">
+            <select id="form-e" name="form-e">
+              <option value="volvo">Volei de Praia</option>
+              <option value="saab">Handebol de Praia</option>
+              <option value="fiat" selected>Skate</option>
+              <option value="audi">BMX</option>
+            </select>
+            </div>
+            
+            <div id="btn">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
