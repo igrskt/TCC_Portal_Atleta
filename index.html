@@ -1,0 +1,121 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="index-pag">
+        <header>
+            <div class="search-box">
+                <input id="pesquisa" type="text" placeholder="pesquisar..."> 
+            </div>
+            <img src="PortalAtleta.png" alt="logo" class="logo">
+            
+
+            
+            <button class="bnt-login">
+                <a href="../Portal Atleta-Login/loginCentral.html">
+                    login
+                <img src="../img/loginbranco.png" id="login" alt="">
+                </a>
+            </button>
+        </header>
+        <section class="carrossel-container">
+            <div class="carrossels ">
+                <img src="../img/carrosselHAN.png"  alt="img1" class="active">
+                <img src="../img/carrosselSKT.png"  alt="img2">
+                <img src="../img/carrosselBMX.png"  alt="img3">
+                <img src="../img/carrosselVOA.png"  alt="img4">
+            </div>
+            <div id="bnt-carrossel">
+                <button id="prevBtn" >&#10094;</button>
+                <button id="nextBtn" >&#10095;</button>
+            </div>
+        </section>
+            <!-- carrossel js  -->
+            <script>
+                const imagens = document.querySelectorAll('.carrossels img');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                let indexAtual = 0;
+                let autoPlayInterval;
+
+                function mostrarImagem(index) {
+                    
+                    imagens[indexAtual].classList.remove('active');
+
+                    
+                    indexAtual = index;
+
+                    
+                    if (indexAtual >= imagens.length) {
+                    indexAtual = 0;
+                    }
+                    
+
+                    if (indexAtual < 0) {
+                    indexAtual = imagens.length - 1;
+                    }
+
+                    
+                    imagens[indexAtual].classList.add('active');
+                    }
+
+                    
+                    function iniciarAutoPlay() {
+                            
+                        autoPlayInterval = setInterval(() => {
+                        mostrarImagem(indexAtual + 1);
+                        }, 8500);
+                    }
+
+                        
+                    function pararAutoPlay() {
+                            clearInterval(autoPlayInterval);
+                    }
+
+                    
+                    nextBtn.addEventListener('click', () => {
+                    mostrarImagem(indexAtual + 1);
+                    iniciarAutoPlay();
+                    });
+
+                    
+                    prevBtn.addEventListener('click', () => {
+                    mostrarImagem(indexAtual - 1);
+                    iniciarAutoPlay();
+                    });
+
+                    iniciarAutoPlay();
+        </script>
+
+        <br>
+        <div class="bloco-esportes">
+            <ul>
+                <li><a href="../InformativoEsporteSkate/InformativoSkate.html">Skate</a></li>
+                <li><a href="../InformativoEsporteBMX/InformativoBMX.html">BMX</a></li>
+                <li><a href="../InformativoEsporteHand/informativoHande.html">Handebol de areia</a></li>
+                <li><a href="../informativoEsporteVolei/informativoVolei.html">Volei de areia</a></li>
+            </ul>
+        </div>
+
+        <div id="sobre-nos">
+
+            <h1>SOBRE NÓS</h1>
+            <br>
+                <p>O projeto Portal Atleta está na missão de dar visibilidade aos atletas que, muitas vezes, estão fora dos holofotes do
+                    esporte, seja por limitação de recursos, ou por falta de oportunidades.
+                    A plataforma utiliza diversos recursos multimídia para deixar a experiência do usuário mais encorajadora e aumentar
+                    o
+                    engajamento. Desde vídeos de treino, highlights de competições, até blogs ou postagens sobre a rotina esportiva, o
+                    Portal Atleta permite que o atleta mostre seu potencial. Isso cria não apenas uma vitrine para os patrocinadores,
+                    mas
+                    também um canal de desenvolvimento entre os próprios atletas do mesmo esporte.
+                </p>   
+        </div>
+        
+
+    </body>
+    </html>
