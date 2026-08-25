@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativo Skate</title>
+    <link rel="stylesheet" href="informativoVolei.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="titulo">
+                <h1>VÔLEI DE AREIA</h1>
+            </div>
+            <a href="#" class="link-pagAtleta">atleta</a>
+        </div>
+        
+        <img src="PortalAtleta.png" alt="logo" class="logo">
+        
+        <div id="bnt-voltar">
+            <a href="index.html">Voltar</a>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <div class="seg-titulo">
+            <h2>A história do vôlei de areia</h2>
+        </div> 
+
+        <div class="conteudo-lado-a-lado">
+            <div class="resumoHistoria">
+                <p>
+                    O vôlei de areia surgiu na década de 1920, nas praias da Califórnia, nos Estados Unidos, como uma forma de lazer
+                    inspirada no vôlei tradicional. Com o passar dos anos, o esporte ficou mais organizado e começaram a surgir campeonatos,
+                    tornando-se popular em vários países.
+                </p>
+                <br>
+                <p>
+                    No Brasil, o vôlei de areia ganhou destaque a partir da década de 1980, quando muitos atletas passaram a competir em
+                    torneios nacionais e internacionais. Hoje, o país é considerado uma das maiores potências da modalidade.
+                </p>
+                <br>
+                <p>
+                    Em 1996, o vôlei de areia passou a fazer parte dos Jogos Olímpicos, aumentando ainda mais sua popularidade. Atualmente,
+                    o esporte é disputado por duas equipes de dois jogadores, em uma quadra de areia, com o objetivo de fazer a bola tocar o
+                    chão da quadra adversária.
+                </p>
+            </div>
+
+            <section class="carrossel-container">
+                <div class="carrossels">
+                    <img src="carrossel_inforVolei1.png" alt="img1" class="active">
+                    <img src="carrossel_inforVolei2.png" alt="img2">
+                    <img src="carrossel_inforVolei3.png" alt="img3">
+                    <img src="carrossel_inforVolei4.png" alt="img4">
+                </div>
+                <div id="bnt-carrossel">
+                    <button id="prevBtn">&#10094;</button>
+                    <button id="nextBtn">&#10095;</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- carrossel js -->
+    <script>
+        const imagens = document.querySelectorAll('.carrossels img');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let indexAtual = 0;
+        let autoPlayInterval;
+
+        function mostrarImagem(index) {
+            imagens[indexAtual].classList.remove('active');
+            indexAtual = index;
+
+            if (indexAtual >= imagens.length) {
+                indexAtual = 0;
+            }
+            if (indexAtual < 0) {
+                indexAtual = imagens.length - 1;
+            }
+
+
+                imagens[indexAtual].classList.add('active');
+            }
+
+
+            function iniciarAutoPlay() {
+
+                autoPlayInterval = setInterval(() => {
+                    mostrarImagem(indexAtual + 1);
+                }, 8500);
+            }
+
+
+            function pararAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+
+            nextBtn.addEventListener('click', () => {
+                mostrarImagem(indexAtual + 1);
+                iniciarAutoPlay();
+            });
+
+
+            prevBtn.addEventListener('click', () => {
+                mostrarImagem(indexAtual - 1);
+                iniciarAutoPlay();
+            });
+
+            iniciarAutoPlay();
+    </script>
+    
+</body>
+    
+</html>

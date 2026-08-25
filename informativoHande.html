@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="informativoHande.css">
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>HANDEBOL DE AREIA</h1>
+        </div>
+        <img src="PortalAtleta.png" alt="logo" class="logo">
+        <a href="" class="link-pagAtleta">atleta</a>
+
+        <div id="bnt-voltar">
+        <a href="index.html">Voltar</a>
+    </div>
+    
+    </header>
+
+       <div class="seg-titulo">
+        <h2>A Historia do Handebol</h2>
+       </div> 
+
+       <div class="conteudo-lado-a-lado">
+        
+        <div class="resumoHistoria">
+        <p>O handebol de praia chegou ao Brasil na década de 1990, poucos anos após sua criação na Itália, e encontrou condições ideais para seu desenvolvimento devido ao extenso litoral brasileiro,
+            ao clima favorável e à forte tradição do handebol de quadra no país. Inicialmente praticado de forma recreativa nas praias, o esporte passou rapidamente a ganhar espaço competitivo com o apoio da Confederação Brasileira de Handebol (CBHb),
+            que organizou campeonatos nacionais, cursos de formação e seleções brasileiras. Esse investimento contribuiu para o crescimento da modalidade em diversos estados e para o surgimento de atletas altamente qualificados.
+            Ao longo dos anos, o Brasil consolidou-se como uma das maiores potências mundiais do handebol de praia, conquistando diversos títulos em Campeonatos Mundiais, Jogos Mundiais e competições continentais, tanto no masculino quanto no feminino.
+            O sucesso das seleções brasileiras é resultado de fatores como a qualidade técnica dos atletas, a tradição esportiva do país, a realização frequente de competições nacionais e a possibilidade de treinamento durante todo o ano. Atualmente, 
+            o handebol de praia é praticado em todas as regiões do Brasil, com categorias de base, adultas e master, além de continuar em constante expansão. Graças ao seu histórico de conquistas e ao desenvolvimento da modalidade,
+            o Brasil é reconhecido internacionalmente como uma das principais referências do handebol de praia e desempenha um papel importante na evolução e popularização desse esporte no cenário mundial.
+        </p>
+    </div>
+
+    <section class="carrossel-container">
+        <div class="carrossels ">
+            <img src="carrossel_inforhand1.png"  alt="img1" class="active">
+            <img src="carrossel_inforhand2.png"  alt="img2">
+            <img src="carrossel_inforhand3.png"  alt="img3">
+            <img src="carrossel_inforhand4.png"  alt="img4">
+        </div>
+        <div id="bnt-carrossel">
+            <button id="prevBtn" >&#10094;</button>
+            <button id="nextBtn" >&#10095;</button>
+        </div>
+    </section>
+
+</div>
+    <!-- carrossel js  -->
+    <script>
+            const imagens = document.querySelectorAll('.carrossels img');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let indexAtual = 0;
+
+            function mostrarImagem(index) {
+                
+                imagens[indexAtual].classList.remove('active');
+
+                
+                indexAtual = index;
+
+                
+                if (indexAtual >= imagens.length) {
+                indexAtual = 0;
+                }
+                
+
+                if (indexAtual < 0) {
+                indexAtual = imagens.length - 1;
+                }
+
+                
+                imagens[indexAtual].classList.add('active');
+                }
+
+                
+                function iniciarAutoPlay() {
+                        
+                    autoPlayInterval = setInterval(() => {
+                    mostrarImagem(indexAtual + 1);
+                    }, 8500);
+                }
+
+                    
+                function pararAutoPlay() {
+                        clearInterval(autoPlayInterval);
+                }
+
+                
+                nextBtn.addEventListener('click', () => {
+                mostrarImagem(indexAtual + 1);
+                iniciarAutoPlay();
+                 });
+
+                
+                prevBtn.addEventListener('click', () => {
+                mostrarImagem(indexAtual - 1);
+                iniciarAutoPlay();
+                });
+
+                iniciarAutoPlay();
+    </script>
+
+</body>
+</html>

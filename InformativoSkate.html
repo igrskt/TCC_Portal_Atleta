@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativo Skate</title>
+    <link rel="stylesheet" href="InformativoSkate.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="titulo">
+                <h1>SKATE</h1>
+            </div>
+            <a href="#" class="link-pagAtleta">atleta</a>
+        </div>
+        
+        <img src="PortalAtleta.png" alt="logo" class="logo">
+        
+        <div id="bnt-voltar">
+            <a href="index.html">Voltar</a>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">  
+        <div class="seg-titulo">
+            <h2>A história do Skate</h2>
+        </div> 
+
+        <div class="conteudo-lado-a-lado">
+            <div class="resumoHistoria">
+                <p>
+                    O <strong>skate</strong> surgiu na década de 1950, nos Estados Unidos, quando surfistas procuravam uma forma de praticar o equilíbrio e as manobras em dias sem ondas. No início, eles adaptavam rodas de patins em tábuas de madeira, criando os primeiros skates. Por isso, o esporte ficou conhecido como "surfe do asfalto".
+                </p>
+                <br>
+                <p>
+                    Durante a década de 1970, o skate passou por uma grande evolução com a criação das rodas de poliuretano, que ofereciam mais aderência e estabilidade. Nessa época, surgiram também as primeiras competições e pistas, tornando o esporte mais popular e seguro.
+                </p>
+                <br>
+                <p>
+                    Nos anos 1980 e 1990, o skate ganhou ainda mais destaque com o desenvolvimento de novas modalidades, como o <strong>street</strong>, praticado em ruas, escadas e corrimãos, e o <strong>vertical</strong>, realizado em rampas. Além de um esporte, o skate passou a representar um estilo de vida, influenciando a música, a moda e a cultura urbana.
+                </p>
+                <br>
+                <p>
+                    Atualmente, o skate é praticado em todo o mundo por pessoas de diferentes idades. Seu reconhecimento cresceu ainda mais quando passou a fazer parte dos Jogos Olímpicos de Verão de Tóquio 2020, marcando sua estreia como modalidade olímpica. Hoje, o skate continua evoluindo, incentivando a criatividade, a superação e a inclusão por meio do esporte.
+                </p>
+            </div>
+
+            <section class="carrossel-container">
+                <div class="carrossels">
+                    <img src="imgSkate4.png" alt="img1" class="active">
+                    <img src="imgSkate3.png" alt="img2">
+                    <img src="imgSkate2.png.png" alt="img3">
+                    <img src="imgSkate1.png.png" alt="img4">
+                </div>
+                <div id="bnt-carrossel">
+                    <button id="prevBtn">&#10094;</button>
+                    <button id="nextBtn">&#10095;</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- carrossel js  -->
+    <script>
+        const imagens = document.querySelectorAll('.carrossels img');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let indexAtual = 0;
+        let autoPlayInterval;
+
+        function mostrarImagem(index) {
+            imagens[indexAtual].classList.remove('active');
+            indexAtual = index;
+
+            if (indexAtual >= imagens.length) {
+                indexAtual = 0;
+            }
+        if (indexAtual < 0) {
+            indexAtual = imagens.length - 1;
+        }
+
+
+        imagens[indexAtual].classList.add('active');
+        }
+
+
+        function iniciarAutoPlay() {
+
+            autoPlayInterval = setInterval(() => {
+            mostrarImagem(indexAtual + 1);
+            }, 8500);
+        }
+
+
+        function pararAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+
+        nextBtn.addEventListener('click', () => {
+            mostrarImagem(indexAtual + 1);
+            iniciarAutoPlay();
+        });
+
+
+        prevBtn.addEventListener('click', () => {
+            mostrarImagem(indexAtual - 1);
+            iniciarAutoPlay();
+        });
+
+        iniciarAutoPlay();
+    </script>
+    
+    </body>
+    
+    </html>
