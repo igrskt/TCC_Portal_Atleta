@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f7f7f9;
+    overflow-x: hidden; 
+}
+
+header {
+    background-color: #570505;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    min-height: 18vh;
+    position: relative;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+header .titulo h1 {
+    color: white;  
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-left: 55px;
+}
+
+header .link-pagAtleta {
+    letter-spacing: 1.8px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px black;
+    margin-left: 55px;
+}
+
+header .logo {
+    display: block;
+        margin-top: 3rem;
+        width: 10%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+header #bnt-voltar a {
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px black;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 18px;
+    transition: background 0.3s;
+    border-radius: 4px;
+    left: 1000px;
+}
+
+header #bnt-voltar a:hover {
+    background-color: gray;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    margin: 50px;
+    background-color: #570505;
+    width: 400px;
+    height: 490px;
+    border-radius: 100 px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: #fff; 
+    text-align: center;
+    
+
+}
+
+.card>h1 {
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.card>p{
+    font-size: 17px;
+    padding: 20px 20px;
+
+}
+
+.btn{
+    font-size: 17px;
+    padding: 10px 50px;
+    border: none;
+    background-color: #202020;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.5s background;
+}
+
+.btn:hover{
+    transition: 0.5s background;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.card>img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-radius: 0;
+}
