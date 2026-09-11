@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informativo Skate</title>
-    <link rel="stylesheet" href="PaginaAtletaSkate.css">
+    <title>Atletas BMX</title>
+    <link rel="stylesheet" href="PaginaAtletaBMX.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="header-left">
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir filtros">☰</button>
             <div class="titulo">
-                <h1>SKATE</h1>
+                <h1>BMX</h1>
             </div>
             <a href="#" class="link-pagAtleta" id="openFilters">Filtros</a>
         </div>
@@ -22,24 +22,20 @@
         <img src="PortalAtleta.png" alt="logo" class="logo">
 
         <div id="bnt-voltar">
-            <a href="InformativoSkate.html">Voltar</a>
+            <a href="InformativoBMX.html">Voltar</a>
         </div>
     </header>
 
-   
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    
     <div class="layout">
 
-        
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <h3>🔎 Filtros</h3>
                 <button class="close-sidebar" id="closeSidebar">✕</button>
             </div>
 
-            
             <div class="filter-section">
                 <div class="filter-title" onclick="toggleFilter(this)">
                     Modalidade <span class="arrow">▼</span>
@@ -48,27 +44,26 @@
                     <label class="check-item">
                         <input type="checkbox" checked>
                         <span class="checkmark"></span>
-                        Street <span class="count">12</span>
+                        Race <span class="count">15</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Freestyle <span class="count">10</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Dirt <span class="count">06</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="checkmark"></span>
                         Park <span class="count">08</span>
                     </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Vertical <span class="count">05</span>
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Freestyle <span class="count">04</span>
-                    </label>
                 </div>
             </div>
 
-            
             <div class="filter-section">
                 <div class="filter-title" onclick="toggleFilter(this)">
                     Nível <span class="arrow">▼</span>
@@ -97,36 +92,32 @@
                 </div>
             </div>
 
-           
-
             <button class="clear-btn" onclick="limparFiltros()">✕ Limpar Filtros</button>
         </aside>
 
-        
         <main class="main">
 
             <div class="page-title">
-                <h2>Atletas de Skate</h2>
+                <h2>Atletas de BMX</h2>
                 <span class="results">4 atletas</span>
             </div>
 
             <div class="cards-grid">
 
-                
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="PaginaAtletaSkate.png" alt="Atleta 1">
+                            <img src="PaginaAtletaBMX.png" alt="Atleta 1">
                             <h3>Atleta</h3>
-                            <p>Skatista desde os 11 anos.</p>
-                            <span class="idade">29 Anos</span>
+                            <p>Piloto de BMX Race desde os 8 anos.</p>
+                            <span class="idade">24 Anos</span>
                             <button class="btn">Ver Página</button>
                         </div>
                         <div class="flip-card-back">
                             <h3>Atleta</h3>
                             <ul>
-                                <li><strong>Modalidade:</strong> Street</li>
-                                <li><strong>Patrocínio:</strong> MiniStore</li>
+                                <li><strong>Modalidade:</strong> Race</li>
+                                <li><strong>Patrocínio:</strong> BikeStore</li>
                                 <li><strong>Nível:</strong> Profissional</li>
                             </ul>
                             <button class="btn">Ver Página Completa</button>
@@ -134,21 +125,20 @@
                     </div>
                 </div>
 
-                <!-- ===== CARD 2 ===== -->
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="PaginaAtletaSkate.png" alt="Atleta 2">
+                            <img src="PaginaAtletaBMX.png" alt="Atleta 2">
                             <h3>Atleta</h3>
-                            <p>Skatista desde os 11 anos.</p>
-                            <span class="idade">29 Anos</span>
+                            <p>Especialista em manobras radicais.</p>
+                            <span class="idade">22 Anos</span>
                             <button class="btn">Ver Página</button>
                         </div>
                         <div class="flip-card-back">
                             <h3>Atleta</h3>
                             <ul>
-                                <li><strong>Modalidade:</strong> Park</li>
-                                <li><strong>Patrocínio:</strong> MiniStore</li>
+                                <li><strong>Modalidade:</strong> Freestyle</li>
+                                <li><strong>Patrocínio:</strong> Extreme Wear</li>
                                 <li><strong>Nível:</strong> Profissional</li>
                             </ul>
                             <button class="btn">Ver Página Completa</button>
@@ -156,22 +146,21 @@
                     </div>
                 </div>
 
-                    
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="PaginaAtletaSkate.png" alt="Atleta 3">
+                            <img src="PaginaAtletaBMX.png" alt="Atleta 3">
                             <h3>Atleta</h3>
-                            <p>Skatista desde os 11 anos, com 5 medalhas de ouro em campeonatos.</p>
-                            <span class="idade">29 Anos</span>
+                            <p>Campeão regional de BMX Race.</p>
+                            <span class="idade">19 Anos</span>
                             <button class="btn">Ver Página</button>
                         </div>
                         <div class="flip-card-back">
                             <h3>Atleta</h3>
                             <ul>
-                                <li><strong>Modalidade:</strong> Vertical</li>
-                                <li><strong>Conquistas:</strong> 🥇🥇🥈🥈🥉</li>
-                                <li><strong>Patrocínio:</strong> MiniStore</li>
+                                <li><strong>Modalidade:</strong> Race</li>
+                                <li><strong>Conquistas:</strong> 🥇🥇🥈</li>
+                                <li><strong>Patrocínio:</strong> Speed Bikes</li>
                                 <li><strong>Nível:</strong> Avançado</li>
                             </ul>
                             <button class="btn">Ver Página Completa</button>
@@ -179,39 +168,34 @@
                     </div>
                 </div>
 
-                
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="PaginaAtletaSkate.png" alt="Atleta 4">
+                            <img src="PaginaAtletaBMX.png" alt="Atleta 4">
                             <h3>Atleta</h3>
-                            <p>Skatista desde os 11 anos.</p>
-                            <span class="idade">29 Anos</span>
+                            <p>Apaixonado por trilhas e saltos.</p>
+                            <span class="idade">27 Anos</span>
                             <button class="btn">Ver Página</button>
                         </div>
                         <div class="flip-card-back">
                             <h3>Atleta</h3>
                             <ul>
-                                <li><strong>Modalidade:</strong> Street</li>
-                                <li><strong>Patrocínio:</strong> MiniStore</li>
-                                <li><strong>Nível:</strong> Profissional</li>
+                                <li><strong>Modalidade:</strong> Dirt</li>
+                                <li><strong>Patrocínio:</strong> Trail Riders</li>
+                                <li><strong>Nível:</strong> Intermediário</li>
                             </ul>
                             <button class="btn">Ver Página Completa</button>
                         </div>
                     </div>
                 </div>
 
-
             </div>
         </main>
     </div>
 
-   
     <div class="toast" id="toast"></div>
 
-    
     <script>
-        
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebarOverlay');
         const menuToggle = document.getElementById('menuToggle');
@@ -238,7 +222,6 @@
         closeBtn.addEventListener('click', fecharSidebar);
         overlay.addEventListener('click', fecharSidebar);
 
-
         function toggleFilter(el) {
             const content = el.nextElementSibling;
             const arrow = el.querySelector('.arrow');
@@ -246,25 +229,19 @@
             arrow.classList.toggle('rotate');
         }
 
-        
         const cards = document.querySelectorAll('.flip-card');
         cards.forEach(card => {
             card.addEventListener('click', (e) => {
-                // para n  flipar se clicar no botão
                 if (e.target.classList.contains('btn')) return;
                 card.classList.toggle('flipped');
             });
         });
 
-        
         function limparFiltros() {
             document.querySelectorAll('.sidebar input[type="checkbox"]').forEach(c => c.checked = false);
-            document.getElementById('idadeMin').value = '';
-            document.getElementById('idadeMax').value = '';
             showToast('Filtros limpos!');
         }
 
-        
         let toastTimer;
         function showToast(msg) {
             const toast = document.getElementById('toast');
@@ -274,12 +251,10 @@
             toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
         }
 
-        
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') fecharSidebar();
         });
 
-        
         window.addEventListener('resize', () => {
             if (window.innerWidth > 900) fecharSidebar();
         });
