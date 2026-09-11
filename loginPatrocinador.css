@@ -1,108 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 768px) {
+    body { height: auto; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
+    #bnt-voltar a { position: relative; left: 0; top: 0; display: block; text-align: center; margin-bottom: 20px; }
+    .form, #form { position: relative; top: 0; left: 0; transform: none; width: 100%; max-width: 400px; padding: 30px 20px; margin: 0 auto; }
+    .title { font-size: 1.4em; min-width: 100%; }
+    .input { min-width: 100%; }
+    .btn-1 button, .btn-2 button { font-size: 1em; height: 60px; }
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    font-family: 'poppins', sans-serif;
-    background-color: #570505;
-
+@media (max-width: 480px) {
+    .form, #form { padding: 20px 15px; }
+    .title { font-size: 1.2em; }
 }
 
-#form{
-    margin: 25px 10px 15px 0px;
-    position: relative;
-    top: 60%;
-    bottom: 55%;
-    left: 50%;
-    transform: translate( -50%, -50%);
-    background:#ffffff;
-    border-radius: 20px;
-    padding: 60px;
-    width: min-content;
-    align-items: center;
-    color: #000000;
-    animation: iniciar 1.6s ease-out;
-    pointer-events: all;
+/* ================= TELAS GRANDES / SMART TVs ================= */
+
+@media (min-width: 1440px) {
+    .form, #form { max-width: 700px; padding: 80px 100px; }
+    .title { font-size: 2.8em; min-width: 100%; margin-bottom: 40px; }
+    .input { min-width: 100%; padding: 15px; margin-bottom: 25px; }
+    .input input { font-size: 1.5em; }
+    #btn button, .btn-1 button, .btn-2 button { height: 80px; font-size: 1.6em; border-radius: 30px; }
+    #bnt-voltar a { font-size: 28px; }
 }
 
-.title{
-    font-size: 1.8em;
-    margin-bottom: 10%; 
-    align-items: center;
-    min-width: 280px;
-    border-radius: 30px;
-    border: 7px #000000 solid;
-    padding: 5px;
-    margin: 0px 0px 12px -5px;
+@media (min-width: 2560px) {
+    .form, #form { max-width: 900px; padding: 100px 120px; }
+    .title { font-size: 3.5em; }
+    .input input { font-size: 1.8em; }
+    #btn button, .btn-1 button, .btn-2 button { height: 100px; font-size: 2em; }
 }
 
-.input{
-    min-width: 280px;
-    border-radius: 22px;
-    border: 2px #570505 solid;
-    padding: 5px;
-    margin: 0px 0px 12px -5px;
-    font-size: 1.2em; 
-    
+/* ================= TELAS ULTRA-GIGANTES (13000px+) ================= */
+@media (max-width: 13000px) {
+    .form, #form {
+        max-width: 5000px;
+        padding: 500px 600px;
+        border-radius: 80px;
+    }
+
+    .title {
+        font-size: 12em;
+        min-width: 100%;
+        margin-bottom: 200px;
+        border-radius: 150px;
+        border: 30px solid #000000;
+        padding: 50px;
+    }
+
+    .input {
+        min-width: 100%;
+        padding: 80px;
+        margin-bottom: 150px;
+        border-radius: 100px;
+        border: 10px solid #570505;
+    }
+
+    .input input {
+        font-size: 5em;
+        padding: 20px 0;
+    }
+
+    #btn button, .btn-1 button, .btn-2 button {
+        height: 400px;
+        font-size: 5em;
+        border-radius: 100px;
+        margin-top: 100px;
+    }
+
+    #bnt-voltar a {
+        font-size: 6em;
+        padding: 50px 100px;
+        margin-bottom: 100px;
+    }
 }
-
-.input input{
-    width: 80%;
-    border: none;
-    outline: none;
-    transform: translateY(-10%);
-    font-size:11pt;
-    background-color: #fff;
-    font-family: 'poppins', sans-serif;
-}
-
-
-#form-e{
-    color: #570505;
-}
-
-#btn{
-    margin-top: 10%;
-    width: 100%;
-    text-align: center;
-    
-}
-
-#btn button{
-    font-family: 'poppins', sans-serif;
-    background-color: #570505;
-    width: 100%;
-    height: 40px;
-    border: none;
-    font-size: 1.2em;
-    color: #fff;
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-}
-
-#btn button:hover{
-    background-color: rgb(56, 82, 44);
-}
-
-#bnt-voltar a {
-    width: 100%;
-    height: 70px;
-    left: 85px;
-    top: 52px;
-    position: relative;
-    color: #fff;
-    -webkit-text-stroke: 0.5px black;
-    letter-spacing: 2.5px;
-    text-decoration: none;
-    padding: 3px;
-    font-size: 20px;
-}
-
-#bnt-voltar a:hover {
-    background-color: rgb(200, 195, 228)
-}  

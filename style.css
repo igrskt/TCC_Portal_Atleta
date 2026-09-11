@@ -9,7 +9,7 @@ header {
     background-color: #570505;
     display: flex;
     align-items: center;
-    padding:  0 3rem;
+    padding: 0 3rem;
     height: 18vh;
     position: relative;
 }
@@ -20,10 +20,8 @@ header {
     padding: 10px 10px;
     margin-left: 210px;
     border: 2px solid #000000;
-   border-radius: 8px;
+    border-radius: 8px;
 }
-
-
 
 .logo {
     display: block;
@@ -36,7 +34,7 @@ header {
 
 button {
     font-family: Optima sans-serif;
-    display: flex ;
+    display: flex;
     text-align: center;
     justify-content: center;
     position: absolute;
@@ -48,9 +46,8 @@ button {
     border-radius: 20px;
     border: solid #ffffff;
     background-color: rgb(0, 0, 0);
-    
-
 }
+
 BUTTON, A {
     font-size: 18px;
     color: #ffffff;
@@ -64,7 +61,7 @@ BUTTON, A {
     padding: 0 2px;
 }
 
-#login{
+#login {
     display: block;
     position: relative;
     width: 30px;
@@ -72,9 +69,7 @@ BUTTON, A {
     padding: 0 2px 0 2px;
 }
 
-
-
-.carrossel-container{
+.carrossel-container {
     position: relative;
     height: 60%;
     max-width: 100%;
@@ -82,34 +77,33 @@ BUTTON, A {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}    
+}
 
-.carrossels img{
+.carrossels img {
     width: 100%;
     height: 640px;
     display: none;
 }
 
-.carrossels img.active{
+.carrossels img.active {
     display: block;
-    animation: fade 0.5s ease-in-out; 
+    animation: fade 0.5s ease-in-out;
     width: 100%;
-    height: 640px ;
+    height: 640px;
 }
 
-
-#bnt-carrossel button{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(4, 4, 4, 0.5);
-  color: white;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
-  transition: background 0.3s;
+#bnt-carrossel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(4, 4, 4, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background 0.3s;
     width: auto;
     height: auto;
     margin: 0;
@@ -117,7 +111,7 @@ BUTTON, A {
 }
 
 #bnt-carrossel button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #prevBtn { left: 10px; }
@@ -130,10 +124,8 @@ BUTTON, A {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center ;
-    
+    justify-content: center;
 }
-
 
 .bloco-esportes ul {
     display: flex;
@@ -144,8 +136,6 @@ BUTTON, A {
     padding: 0;
     gap: 180px;
 }
-
-
 
 .bloco-esportes li a {
     text-decoration: none;
@@ -163,9 +153,9 @@ li a:hover {
 }
 
 #sobre-nos {
-    background-color:rgb(230, 229, 235);
+    background-color: rgb(230, 229, 235);
     color: black;
-    margin: 30px;
+    margin: 30px auto;
     width: 52em;
     height: 25rem;
     position: relative;
@@ -175,7 +165,7 @@ li a:hover {
     box-shadow: 16px 14px 10px rgba(16, 16, 16, 0.354);
 }
 
-#sobre-nos h1{
+#sobre-nos h1 {
     display: flex;
     justify-content: center;
     padding-top: 5px;
@@ -184,15 +174,109 @@ li a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-#sobre-nos p{
+#sobre-nos p {
     justify-content: center;
-    padding: 30px 30px;       
-
+    padding: 30px 30px;
 }
-
 
 @keyframes fade {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+    from { opacity: 0.4; }
+    to { opacity: 1; }
 }
 
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 1024px) {
+    header { padding: 0 1.5rem; }
+    #pesquisa { margin-left: 50px; width: 200px; }
+    button { margin-left: 30rem; }
+    .bloco-esportes ul { gap: 60px; }
+    #sobre-nos { width: 85%; height: auto; font-size: 22px; }
+}
+
+@media (max-width: 768px) {
+    header { flex-direction: column; height: auto; padding: 20px; gap: 15px; }
+    #pesquisa { margin: 0; width: 100%; max-width: 400px; }
+    .logo { position: relative; margin: 0; width: 120px; left: auto; transform: none; }
+    button { position: relative; margin: 0; width: 100%; max-width: 300px; }
+    .carrossels img, .carrossels img.active { height: 350px; }
+    .bloco-esportes { height: auto; padding: 15px 0; }
+    .bloco-esportes ul { flex-direction: column; gap: 15px; }
+    #sobre-nos { width: 90%; margin: 20px auto; font-size: 18px; }
+    #sobre-nos p { padding: 20px; }
+}
+
+@media (max-width: 480px) {
+    .carrossels img, .carrossels img.active { height: 250px; }
+    #sobre-nos { font-size: 16px; }
+}
+
+/* ================= TELAS GRANDES / SMART TVs ================= */
+
+@media (min-width: 1440px) {
+    header { padding: 0 5rem; }
+    #pesquisa { width: 350px; margin-left: 300px; padding: 15px; font-size: 20px; }
+    .logo { width: 8%; }
+    button { margin-left: 75rem; width: 250px; }
+    BUTTON, A { font-size: 22px; height: 3.2em; width: 14em; }
+    .carrossels img, .carrossels img.active { height: 800px; }
+    .bloco-esportes { height: 80px; }
+    .bloco-esportes ul { gap: 250px; }
+    .bloco-esportes li a { font-size: 28px; }
+    #sobre-nos { width: 1200px; height: auto; font-size: 34px; padding-bottom: 30px; }
+    #sobre-nos p { padding: 40px; line-height: 1.6; }
+}
+
+@media (min-width: 2560px) {
+    #pesquisa { margin-left: 400px; width: 500px; }
+    button { margin-left: 110rem; }
+    .carrossels img, .carrossels img.active { height: 1100px; }
+    .bloco-esportes ul { gap: 400px; }
+    #sobre-nos { width: 1600px; font-size: 42px; }
+}
+
+/* ================= TELAS ULTRA-GIGANTES (13000px+) ================= */
+@media (max-width: 13000px) {
+    header { padding: 0 15rem; height: 20vh; }
+    
+    #pesquisa { 
+        width: 2500px; 
+        margin-left: 1500px; 
+        padding: 50px; 
+        font-size: 80px; 
+        border-radius: 30px; 
+    }
+    
+    .logo { width: 6%; }
+    
+    button { 
+        margin-left: 350rem; 
+        width: 1200px; 
+        border-radius: 60px; 
+        padding: 50px 0;
+    }
+    
+    BUTTON, A { font-size: 90px; gap: 50px; height: 4em; width: 12em; }
+    #login { width: 120px; height: 100px; }
+
+    .carrossels img, .carrossels img.active { height: 4500px; }
+    
+    #bnt-carrossel button { padding: 80px; font-size: 80px; border-radius: 50%; }
+    #prevBtn { left: 80px; }
+    #nextBtn { right: 80px; }
+
+    .bloco-esportes { height: 400px; }
+    .bloco-esportes ul { gap: 1500px; }
+    .bloco-esportes li a { font-size: 120px; padding: 20px 40px; }
+
+    #sobre-nos {
+        width: 10000px;
+        font-size: 140px;
+        padding: 100px;
+        border-radius: 80px;
+        margin: 100px auto;
+        box-shadow: 60px 50px 40px rgba(16, 16, 16, 0.354);
+    }
+    
+    #sobre-nos p { padding: 100px 150px; line-height: 2; }
+}
