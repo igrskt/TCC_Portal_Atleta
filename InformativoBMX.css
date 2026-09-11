@@ -18,7 +18,7 @@ header .titulo{
     font-size: 13px;
     letter-spacing: 1px;
     margin: 38px;
-    margin-left: 120px; 
+    margin-left: 180px; 
 }
 
 header .logo {
@@ -36,7 +36,7 @@ header .link-pagAtleta{
     letter-spacing: 1.8px;
     font-size: 26px;
     color:white;
-    margin-left: 120px;
+    margin-left: 180px;
     text-decoration: none;
     color: #ffffff;
     -webkit-text-stroke: 0.5px black;
@@ -45,7 +45,7 @@ header .link-pagAtleta{
 header #bnt-voltar a {
     width: 100%;
     height: 70px;
-    left: 1000px;
+    left: 1150px;
     top: 75px;
     position: relative;
     color: #ffffff;

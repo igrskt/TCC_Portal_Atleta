@@ -1,78 +1,290 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informativo Skate</title>
     <link rel="stylesheet" href="PaginaAtletaSkate.css">
 </head>
+
 <body>
-    
+
     <header>
         <div class="header-left">
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir filtros">☰</button>
             <div class="titulo">
                 <h1>SKATE</h1>
             </div>
-            <a href="#" class="link-pagAtleta">Filtros</a>
-        </div>
-        
-        <img src="../img/PortalAtleta.png" alt="logo" class="logo">
-        
-        <div id="bnt-voltar">
-            <a href="../pag-inicial/index.html">Voltar</a>
+            <a href="#" class="link-pagAtleta" id="openFilters">Filtros</a>
         </div>
 
+        <img src="PortalAtleta.png" alt="logo" class="logo">
+
+        <div id="bnt-voltar">
+            <a href="InformativoSkate.html">Voltar</a>
+        </div>
     </header>
 
+   
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     
+    <div class="layout">
 
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>🔎 Filtros</h3>
+                <button class="close-sidebar" id="closeSidebar">✕</button>
+            </div>
 
-
-
-
-    <div class="main">
-
-        <div class="card card1">
-            <img src="PaginaAtletaSkate.png" alt="imagem1">
-            <h1>Atleta</h1>
-            <p>Skatista desde os 11 anos de idade,
-             com 5 medalhas de ouro em campeonatos</p>
-            <p>29 Anos</p>
-            <button class="btn">Ver Pagina</button>
             
-        </div>
+            <div class="filter-section">
+                <div class="filter-title" onclick="toggleFilter(this)">
+                    Modalidade <span class="arrow">▼</span>
+                </div>
+                <div class="filter-content">
+                    <label class="check-item">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Street <span class="count">12</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Park <span class="count">08</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Vertical <span class="count">05</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Freestyle <span class="count">04</span>
+                    </label>
+                </div>
+            </div>
 
-        <div class="card card2">
-                        <img src="PaginaAtletaSkate.png" alt="imagem2">
-                        <h1>Atleta</h1>
-                        <p>Skatista desde os 11 anos de idade,
-                        com 5 medalhas de ouro em campeonatos</p>
-                        <p>29 Anos</p>
-                        <button class="btn">Ver Pagina</button>
-        </div>
+            
+            <div class="filter-section">
+                <div class="filter-title" onclick="toggleFilter(this)">
+                    Nível <span class="arrow">▼</span>
+                </div>
+                <div class="filter-content">
+                    <label class="check-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Iniciante
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Intermediário
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Avançado
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Profissional
+                    </label>
+                </div>
+            </div>
 
-        <div class="card card3">
-                        <img src="PaginaAtletaSkate.png" alt="imagem3">
-                        <h1>Atleta</h1>
-                        <p>Skatista desde os 11 anos de idade,
-                        com 5 medalhas de ouro em campeonatos</p>
-                        <p>29 Anos</p>
-                        <button class="btn">Ver Pagina</button>
+           
 
-        </div>
+            <button class="clear-btn" onclick="limparFiltros()">✕ Limpar Filtros</button>
+        </aside>
 
-        <div class="card card4">
-                        <img src="PaginaAtletaSkate.png" alt="imagem4">
-                        <h1>Atleta</h1>
-                        <p>Skatista desde os 11 anos de idade,
-                        com 5 medalhas de ouro em campeonatos</p>
-                        <p>29 Anos</p>
-                        <button class="btn">Ver Pagina</button>
+        
+        <main class="main">
 
-        </div>
+            <div class="page-title">
+                <h2>Atletas de Skate</h2>
+                <span class="results">6 atletas</span>
+            </div>
 
+            <div class="cards-grid">
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="PaginaAtletaSkate.png" alt="Atleta 1">
+                            <h3>Atleta</h3>
+                            <p>Skatista desde os 11 anos.</p>
+                            <span class="idade">29 Anos</span>
+                            <button class="btn">Ver Página</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Atleta</h3>
+                            <ul>
+                                <li><strong>Modalidade:</strong> Street</li>
+                                <li><strong>Patrocínio:</strong> MiniStore</li>
+                                <li><strong>Nível:</strong> Profissional</li>
+                            </ul>
+                            <button class="btn">Ver Página Completa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== CARD 2 ===== -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="PaginaAtletaSkate.png" alt="Atleta 2">
+                            <h3>Atleta</h3>
+                            <p>Skatista desde os 11 anos.</p>
+                            <span class="idade">29 Anos</span>
+                            <button class="btn">Ver Página</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Atleta</h3>
+                            <ul>
+                                <li><strong>Modalidade:</strong> Park</li>
+                                <li><strong>Patrocínio:</strong> MiniStore</li>
+                                <li><strong>Nível:</strong> Profissional</li>
+                            </ul>
+                            <button class="btn">Ver Página Completa</button>
+                        </div>
+                    </div>
+                </div>
+
+                    
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="PaginaAtletaSkate.png" alt="Atleta 3">
+                            <h3>Atleta</h3>
+                            <p>Skatista desde os 11 anos, com 5 medalhas de ouro em campeonatos.</p>
+                            <span class="idade">29 Anos</span>
+                            <button class="btn">Ver Página</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Atleta</h3>
+                            <ul>
+                                <li><strong>Modalidade:</strong> Vertical</li>
+                                <li><strong>Conquistas:</strong> 🥇🥇🥈🥈🥉</li>
+                                <li><strong>Patrocínio:</strong> MiniStore</li>
+                                <li><strong>Nível:</strong> Avançado</li>
+                            </ul>
+                            <button class="btn">Ver Página Completa</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="PaginaAtletaSkate.png" alt="Atleta 4">
+                            <h3>Atleta</h3>
+                            <p>Skatista desde os 11 anos.</p>
+                            <span class="idade">29 Anos</span>
+                            <button class="btn">Ver Página</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Atleta</h3>
+                            <ul>
+                                <li><strong>Modalidade:</strong> Street</li>
+                                <li><strong>Patrocínio:</strong> MiniStore</li>
+                                <li><strong>Nível:</strong> Profissional</li>
+                            </ul>
+                            <button class="btn">Ver Página Completa</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
     </div>
 
+   
+    <div class="toast" id="toast"></div>
+
+    
+    <script>
+        
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        const menuToggle = document.getElementById('menuToggle');
+        const closeBtn = document.getElementById('closeSidebar');
+        const openFilters = document.getElementById('openFilters');
+
+        function abrirSidebar() {
+            sidebar.classList.add('open');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharSidebar() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', abrirSidebar);
+        openFilters.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirSidebar();
+        });
+        closeBtn.addEventListener('click', fecharSidebar);
+        overlay.addEventListener('click', fecharSidebar);
+
+
+        function toggleFilter(el) {
+            const content = el.nextElementSibling;
+            const arrow = el.querySelector('.arrow');
+            content.classList.toggle('collapsed');
+            arrow.classList.toggle('rotate');
+        }
+
+        
+        const cards = document.querySelectorAll('.flip-card');
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // para n  flipar se clicar no botão
+                if (e.target.classList.contains('btn')) return;
+                card.classList.toggle('flipped');
+            });
+        });
+
+        
+        function limparFiltros() {
+            document.querySelectorAll('.sidebar input[type="checkbox"]').forEach(c => c.checked = false);
+            document.getElementById('idadeMin').value = '';
+            document.getElementById('idadeMax').value = '';
+            showToast('Filtros limpos!');
+        }
+
+        
+        let toastTimer;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+        }
+
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') fecharSidebar();
+        });
+
+        
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) fecharSidebar();
+        });
+    </script>
 
 </body>
+
 </html>
