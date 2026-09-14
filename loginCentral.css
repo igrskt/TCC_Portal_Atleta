@@ -1,77 +1,190 @@
-/* ================= RESPONSIVIDADE ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #570505;
+}
+
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    padding: 48px 56px;
+    width: min(90vw, 420px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    animation: iniciar 0.6s ease-out;
+    pointer-events: all;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    border: solid;
+
+    min-width: 280px;
+    border-radius: 30px;
+    border: 7px #000000 solid;
+    padding: 5px;
+    margin: 0px 0px 12px -5px;
+    
+}
+
+
+.btn-1,
+.btn-2 {
+    width: 100%;
+}
+
+.btn-1 a,
+.btn-2 a {
+    display: block;
+    text-decoration: none;
+}
+
+.btn-1 button,
+.btn-2 button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #570505;
+    width: 100%;
+    height: 70px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-1 button:hover,
+.btn-2 button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn-1 button:active,
+.btn-2 button:active {
+    transform: translateY(0);
+}
+
+#bnt-voltar a{
+    width: 100%;
+    height: 70px;
+    left: 85px;
+    top: 52px;
+    position: relative;
+    color: #ffffff;
+    -webkit-text-stroke: 0.7px black;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    padding: 3px;
+    font-size: 20px;
+}
+
+#bnt-voltar a:hover{
+ background-color: rgb(200, 195, 228)
+}
+
+@media (max-width: 1024px) {
+    .conteudo-lado-a-lado { gap: 25px; padding: 0 18px; }
+    .resumoHistoria { padding: 22px; }
+    .carrossels img { height: 380px; }
+}
+
+/* ================= CELULAR ================= */
 @media (max-width: 768px) {
-    body { height: auto; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
-    #bnt-voltar a { position: relative; left: 0; top: 0; display: block; text-align: center; margin-bottom: 20px; }
-    .form, #form { position: relative; top: 0; left: 0; transform: none; width: 100%; max-width: 400px; padding: 30px 20px; margin: 0 auto; }
-    .title { font-size: 1.4em; min-width: 100%; }
-    .input { min-width: 100%; }
-    .btn-1 button, .btn-2 button { font-size: 1em; height: 60px; }
+    header { flex-direction: column; padding: 15px; text-align: center; min-height: auto; }
+    header .logo {
+        position: relative;
+        left: auto; top: auto;
+        transform: none;
+        width: 110px;
+        margin: 10px 0;
+        order: -1;
+    }
+    header .titulo h1 { font-size: 20px; }
+    header .link-pagAtleta,
+    header #bnt-voltar a { font-size: 16px; padding: 6px 10px; }
+
+    .seg-titulo { margin: 25px 0 15px; }
+    .seg-titulo h2 { font-size: 22px; }
+
+    .conteudo-lado-a-lado {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+        margin-bottom: 40px;
+    }
+    .resumoHistoria { padding: 18px; font-size: 14px; }
+    .resumoHistoria p { font-size: 14px; line-height: 1.6; }
+    .carrossels img { height: 280px; }
+    #bnt-carrossel button { padding: 8px 12px; font-size: 14px; }
 }
 
+/* ================= CELULAR PEQUENO ================= */
 @media (max-width: 480px) {
-    .form, #form { padding: 20px 15px; }
-    .title { font-size: 1.2em; }
+    .resumoHistoria p { font-size: 13px; }
+    .seg-titulo h2 { font-size: 20px; }
+    .carrossels img { height: 220px; }
 }
 
-/* ================= TELAS GRANDES / SMART TVs ================= */
-
+/* ================= TELAS GRANDES ================= */
 @media (min-width: 1440px) {
-    .form, #form { max-width: 700px; padding: 80px 100px; }
-    .title { font-size: 2.8em; min-width: 100%; margin-bottom: 40px; }
-    .input { min-width: 100%; padding: 15px; margin-bottom: 25px; }
-    .input input { font-size: 1.5em; }
-    #btn button, .btn-1 button, .btn-2 button { height: 80px; font-size: 1.6em; border-radius: 30px; }
-    #bnt-voltar a { font-size: 28px; }
+    header .titulo h1 { font-size: 32px; }
+    header .link-pagAtleta,
+    header #bnt-voltar a { font-size: 22px; }
+    header .logo { max-width: 140px; }
+
+    .seg-titulo h2 { font-size: 34px; }
+    .conteudo-lado-a-lado { max-width: 1500px; gap: 60px; }
+    .resumoHistoria p { font-size: 19px; line-height: 1.85; }
+    .carrossels img { height: 600px; }
 }
 
 @media (min-width: 2560px) {
-    .form, #form { max-width: 900px; padding: 100px 120px; }
-    .title { font-size: 3.5em; }
-    .input input { font-size: 1.8em; }
-    #btn button, .btn-1 button, .btn-2 button { height: 100px; font-size: 2em; }
+    header .titulo h1 { font-size: 40px; }
+    .conteudo-lado-a-lado { max-width: 2100px; }
+    .resumoHistoria p { font-size: 24px; }
+    .carrossels img { height: 850px; }
 }
 
-/* ================= TELAS ULTRA-GIGANTES (13000px+) ================= */
-@media (max-width: 13000px) {
-    .form, #form {
-        max-width: 5000px;
-        padding: 500px 600px;
-        border-radius: 80px;
-    }
+/* ================= ULTRA-WIDE (3000px+) ================= */
+@media (min-width: 3000px) {
+    header { padding: 30px 80px; }
+    header .titulo h1 { font-size: 60px; }
+    header .link-pagAtleta,
+    header #bnt-voltar a { font-size: 40px; padding: 15px 30px; }
+    header .logo { max-width: 220px; }
 
-    .title {
-        font-size: 12em;
-        min-width: 100%;
-        margin-bottom: 200px;
-        border-radius: 150px;
-        border: 30px solid #000000;
-        padding: 50px;
-    }
-
-    .input {
-        min-width: 100%;
-        padding: 80px;
-        margin-bottom: 150px;
-        border-radius: 100px;
-        border: 10px solid #570505;
-    }
-
-    .input input {
-        font-size: 5em;
-        padding: 20px 0;
-    }
-
-    #btn button, .btn-1 button, .btn-2 button {
-        height: 400px;
-        font-size: 5em;
-        border-radius: 100px;
-        margin-top: 100px;
-    }
-
-    #bnt-voltar a {
-        font-size: 6em;
-        padding: 50px 100px;
-        margin-bottom: 100px;
-    }
+    .seg-titulo h2 { font-size: 70px; }
+    .conteudo-lado-a-lado { max-width: 2600px; gap: 80px; }
+    .resumoHistoria { padding: 60px; border-radius: 24px; }
+    .resumoHistoria p { font-size: 34px; line-height: 2; }
+    .carrossels img { height: 1200px; }
+    #bnt-carrossel button { padding: 24px 30px; font-size: 40px; }
 }
