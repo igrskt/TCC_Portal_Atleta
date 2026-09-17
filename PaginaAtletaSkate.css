@@ -268,12 +268,12 @@ header #bnt-voltar a:hover {
     transition: all 0.25s;
 }
 
-.check-item input:checked + .checkmark {
+.check-item input:checked+.checkmark {
     background: var(--primary);
     border-color: var(--primary);
 }
 
-.check-item input:checked + .checkmark::after {
+.check-item input:checked+.checkmark::after {
     content: '✓';
     position: absolute;
     top: 50%;
@@ -432,6 +432,11 @@ header #bnt-voltar a:hover {
     transition: box-shadow 0.3s ease;
 }
 
+.flip-card-front a,
+.flip-card-back a {
+    text-decoration: none;
+}
+
 .flip-card:hover .flip-card-front,
 .flip-card:hover .flip-card-back {
     box-shadow: var(--shadow-hover);
@@ -567,7 +572,7 @@ header #bnt-voltar a:hover {
         display: block;
     }
 
-    
+
     header .link-pagAtleta {
         display: none;
     }

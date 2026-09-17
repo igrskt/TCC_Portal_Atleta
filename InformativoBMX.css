@@ -32,14 +32,18 @@ header .titulo h1 {
 
 header .link-pagAtleta {
     color: #fff;
+    left: 70px;
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 2px;
     padding: 4px 10px;
     border-radius: 4px;
-    transition: background .3s;
+    transition: background 0.3s;
 }
-header .link-pagAtleta:hover { background: rgba(255,255,255,.15); }
+
+header .link-pagAtleta:hover {
+    background: rgba(255, 255, 255, .15);
+}
 
 header .logo {
     width: 8%;
@@ -59,12 +63,16 @@ header #bnt-voltar a {
     border-radius: 4px;
     transition: background .3s;
 }
-header #bnt-voltar a:hover { background: rgba(255,255,255,.2); }
+
+header #bnt-voltar a:hover {
+    background: rgba(255, 255, 255, .2);
+}
 
 .seg-titulo {
     text-align: center;
     margin: 40px 0 25px;
 }
+
 .seg-titulo h2 {
     color: #570505;
     font-size: 28px;
@@ -85,8 +93,9 @@ header #bnt-voltar a:hover { background: rgba(255,255,255,.2); }
     background: #fff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
 }
+
 .resumoHistoria p {
     font-size: 12px;
     line-height: 1.75;
@@ -99,7 +108,7 @@ header #bnt-voltar a:hover { background: rgba(255,255,255,.2); }
     flex: 1 1 50%;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
     min-height: 300px;
 }
 
@@ -109,6 +118,7 @@ header #bnt-voltar a:hover { background: rgba(255,255,255,.2); }
     object-fit: cover;
     display: none;
 }
+
 .carrossels img.active {
     display: block;
     animation: fade .5s ease-in-out;
@@ -118,7 +128,7 @@ header #bnt-voltar a:hover { background: rgba(255,255,255,.2); }
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     color: #fff;
     border: none;
     padding: 12px 16px;
@@ -129,39 +139,81 @@ header #bnt-voltar a:hover { background: rgba(255,255,255,.2); }
     height: auto;
     transition: background .3s;
 }
-#bnt-carrossel button:hover { background: rgba(0,0,0,.8); }
-#prevBtn { left: 10px; }
-#nextBtn { right: 10px; }
+
+#bnt-carrossel button:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
 
 @keyframes fade {
-    from { opacity: .4; }
-    to   { opacity: 1; }
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* ================= TABLET ================= */
 @media (max-width: 1024px) {
-    .conteudo-lado-a-lado { gap: 25px; padding: 0 18px; }
-    .resumoHistoria { padding: 22px; }
-    .carrossels img { height: 380px; }
+    .conteudo-lado-a-lado {
+        gap: 25px;
+        padding: 0 18px;
+    }
+
+    .resumoHistoria {
+        padding: 22px;
+    }
+
+    .carrossels img {
+        height: 380px;
+    }
 }
 
 /* ================= CELULAR ================= */
 @media (max-width: 768px) {
-    header { flex-direction: column; padding: 15px; text-align: center; min-height: auto; }
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+        min-height: auto;
+    }
+
     header .logo {
         position: relative;
-        left: auto; top: auto;
+        left: auto;
+        top: auto;
         transform: none;
         width: 110px;
         margin: 10px 0;
         order: -1;
     }
-    header .titulo h1 { font-size: 20px; }
-    header .link-pagAtleta,
-    header #bnt-voltar a { font-size: 16px; padding: 6px 10px; }
 
-    .seg-titulo { margin: 25px 0 15px; }
-    .seg-titulo h2 { font-size: 22px; }
+    header .titulo h1 {
+        font-size: 20px;
+    }
+
+    header .link-pagAtleta,
+    header #bnt-voltar a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .seg-titulo {
+        margin: 25px 0 15px;
+    }
+
+    .seg-titulo h2 {
+        font-size: 22px;
+    }
 
     .conteudo-lado-a-lado {
         flex-direction: column;
@@ -169,51 +221,139 @@ header #bnt-voltar a:hover { background: rgba(255,255,255,.2); }
         padding: 0 15px;
         margin-bottom: 40px;
     }
-    .resumoHistoria { padding: 18px; font-size: 14px; }
-    .resumoHistoria p { font-size: 14px; line-height: 1.6; }
-    .carrossels img { height: 280px; }
-    #bnt-carrossel button { padding: 8px 12px; font-size: 14px; }
+
+    .resumoHistoria {
+        padding: 18px;
+        font-size: 14px;
+    }
+
+    .resumoHistoria p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .carrossels img {
+        height: 280px;
+    }
+
+    #bnt-carrossel button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
 }
 
 /* ================= CELULAR PEQUENO ================= */
 @media (max-width: 480px) {
-    .resumoHistoria p { font-size: 13px; }
-    .seg-titulo h2 { font-size: 20px; }
-    .carrossels img { height: 220px; }
+    .resumoHistoria p {
+        font-size: 13px;
+    }
+
+    .seg-titulo h2 {
+        font-size: 20px;
+    }
+
+    .carrossels img {
+        height: 220px;
+    }
 }
 
 /* ================= TELAS GRANDES ================= */
 @media (min-width: 1440px) {
-    header .titulo h1 { font-size: 32px; }
-    header .link-pagAtleta,
-    header #bnt-voltar a { font-size: 22px; }
-    header .logo { max-width: 140px; }
+    header .titulo h1 {
+        font-size: 32px;
+    }
 
-    .seg-titulo h2 { font-size: 34px; }
-    .conteudo-lado-a-lado { max-width: 1500px; gap: 60px; }
-    .resumoHistoria p { font-size: 19px; line-height: 1.85; }
-    .carrossels img { height: 600px; }
+    header .link-pagAtleta,
+    header #bnt-voltar a {
+        font-size: 22px;
+    }
+
+    header .logo {
+        max-width: 140px;
+    }
+
+    .seg-titulo h2 {
+        font-size: 34px;
+    }
+
+    .conteudo-lado-a-lado {
+        max-width: 1500px;
+        gap: 60px;
+    }
+
+    .resumoHistoria p {
+        font-size: 19px;
+        line-height: 1.85;
+    }
+
+    .carrossels img {
+        height: 600px;
+    }
 }
 
 @media (min-width: 2560px) {
-    header .titulo h1 { font-size: 40px; }
-    .conteudo-lado-a-lado { max-width: 2100px; }
-    .resumoHistoria p { font-size: 24px; }
-    .carrossels img { height: 850px; }
+    header .titulo h1 {
+        font-size: 40px;
+    }
+
+    .conteudo-lado-a-lado {
+        max-width: 2100px;
+    }
+
+    .resumoHistoria p {
+        font-size: 24px;
+    }
+
+    .carrossels img {
+        height: 850px;
+    }
 }
 
 /* ================= ULTRA-WIDE (3000px+) ================= */
 @media (min-width: 3000px) {
-    header { padding: 30px 80px; }
-    header .titulo h1 { font-size: 60px; }
-    header .link-pagAtleta,
-    header #bnt-voltar a { font-size: 40px; padding: 15px 30px; }
-    header .logo { max-width: 220px; }
+    header {
+        padding: 30px 80px;
+    }
 
-    .seg-titulo h2 { font-size: 70px; }
-    .conteudo-lado-a-lado { max-width: 2600px; gap: 80px; }
-    .resumoHistoria { padding: 60px; border-radius: 24px; }
-    .resumoHistoria p { font-size: 34px; line-height: 2; }
-    .carrossels img { height: 1200px; }
-    #bnt-carrossel button { padding: 24px 30px; font-size: 40px; }
+    header .titulo h1 {
+        font-size: 60px;
+    }
+
+    header .link-pagAtleta,
+    header #bnt-voltar a {
+        font-size: 40px;
+        padding: 15px 30px;
+    }
+
+    header .logo {
+        max-width: 220px;
+    }
+
+    .seg-titulo h2 {
+        font-size: 70px;
+    }
+
+    .conteudo-lado-a-lado {
+        max-width: 2600px;
+        gap: 80px;
+    }
+
+    .resumoHistoria {
+        padding: 60px;
+        border-radius: 24px;
+    }
+
+    .resumoHistoria p {
+        font-size: 34px;
+        line-height: 2;
+    }
+
+    .carrossels img {
+        height: 1200px;
+    }
+
+    #bnt-carrossel button {
+        padding: 24px 30px;
+        font-size: 40px;
+    }
 }
