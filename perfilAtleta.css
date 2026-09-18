@@ -55,13 +55,22 @@ header .titulo h1 {
     margin-left: 55px;
 }
 
-header .logo {
-    display: block;
-    margin-top: 3rem;
-    width: 10%;
+
+.logo-link {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    top: 1.5rem;
+    width: 10%;
+    z-index: 10;
+    display: block;
+}
+
+.logo-link .logo {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin: 0;
 }
 
 header #bnt-voltar a {
@@ -227,7 +236,7 @@ header #bnt-voltar a:hover {
     padding-top: 24px;
 }
 
-/* ================= ESTATÍSTICAS ================= */
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -243,11 +252,21 @@ header #bnt-voltar a:hover {
     text-align: center;
     box-shadow: var(--shadow);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+    z-index: 10;
 }
 
 .stat-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
+}
+
+.stat-card.open {
+    z-index: 50;
+
 }
 
 .stat-card strong {
@@ -267,6 +286,73 @@ header #bnt-voltar a:hover {
     letter-spacing: 1px;
 }
 
+
+.stat-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-hover);
+    min-width: 220px;
+    max-width: 450px;
+    z-index: 1000;
+    padding: 10px 0;
+    margin-top: 8px;
+    text-align: left;
+}
+
+
+.stat-dropdown ul.multi-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, auto);
+    grid-auto-flow: column;
+    min-width: 480px;
+    max-width: 600px;
+}
+
+.stat-card.open .stat-dropdown {
+    display: block;
+    animation: fadeIn 0.55s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.stat-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.stat-dropdown li {
+    padding: 8px 15px;
+    font-size: 13px;
+    color: var(--text);
+    border-bottom: 1px dashed var(--border);
+    line-height: 1.4;
+}
+
+.stat-dropdown li:last-child {
+    border-bottom: none;
+}
+
+
 /* ================= BLOCOS ================= */
 .perfil-grid {
     display: grid;
@@ -284,6 +370,7 @@ header #bnt-voltar a:hover {
 }
 
 .bloco h2 {
+    text-align: center; 
     font-size: 16px;
     color: var(--primary);
     letter-spacing: 1px;
@@ -314,6 +401,11 @@ header #bnt-voltar a:hover {
 
 .info-lista span {
     color: var(--text-light);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.250);
+}
+
+.info-lista span:hover {
+    color: var(--text-grey);
 }
 
 .info-lista strong {
@@ -335,7 +427,6 @@ header #bnt-voltar a:hover {
     gap: 12px;
     padding: 14px 16px;
     background: #faf7f7;
-    border-left: 4px solid var(--gold);
     border-radius: 8px;
     font-size: 15px;
     line-height: 1.45;
@@ -354,7 +445,7 @@ header #bnt-voltar a:hover {
     margin-top: 30px;
 }
 
-/* ================= TOAST ================= */
+
 .toast {
     position: fixed;
     bottom: 24px;
@@ -377,21 +468,35 @@ header #bnt-voltar a:hover {
     transform: translateY(0);
 }
 
-/* =========================================================
-   TABLET — 1024px
-========================================================= */
+
 @media (max-width: 1024px) {
-    .main { padding: 35px 4% 50px; }
-    .perfil-hero { grid-template-columns: 220px 1fr; gap: 26px; padding: 24px; }
-    .perfil-dados h1 { font-size: 30px; }
-    .stats-grid { gap: 16px; }
-    .perfil-grid { grid-template-columns: 1fr; }
-    .bloco { padding: 22px; }
+    .main {
+        padding: 35px 4% 50px;
+    }
+
+    .perfil-hero {
+        grid-template-columns: 220px 1fr;
+        gap: 26px;
+        padding: 24px;
+    }
+
+    .perfil-dados h1 {
+        font-size: 30px;
+    }
+
+    .stats-grid {
+        gap: 16px;
+    }
+
+    .perfil-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bloco {
+        padding: 22px;
+    }
 }
 
-/* =========================================================
-   CELULAR — 768px
-========================================================= */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -407,7 +512,7 @@ header #bnt-voltar a:hover {
         margin-top: 10px;
     }
 
-    header .logo {
+    .logo-link {
         position: relative;
         left: auto;
         top: auto;
@@ -417,9 +522,14 @@ header #bnt-voltar a:hover {
         order: -1;
     }
 
-    header #bnt-voltar a { font-size: 15px; padding: 6px 10px; }
+    header #bnt-voltar a {
+        font-size: 15px;
+        padding: 6px 10px;
+    }
 
-    .main { padding: 25px 15px 40px; }
+    .main {
+        padding: 25px 15px 40px;
+    }
 
     .perfil-hero {
         grid-template-columns: 1fr;
@@ -428,31 +538,107 @@ header #bnt-voltar a:hover {
         text-align: center;
     }
 
-    .perfil-foto { width: 100%; max-width: 220px; margin: 0 auto; }
-    .perfil-dados h1 { font-size: 26px; }
-    .perfil-bio { font-size: 15px; margin: 0 auto; }
-    .perfil-tags, .perfil-acoes { justify-content: center; }
+    .perfil-foto {
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto;
+    }
 
-    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .stat-card strong { font-size: 24px; }
-    .bloco h2 { font-size: 15px; }
+    .perfil-dados h1 {
+        font-size: 26px;
+    }
+
+    .perfil-bio {
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    .perfil-tags, .perfil-acoes {
+        justify-content: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .stat-card strong {
+        font-size: 24px;
+    }
+
+    .bloco h2 {
+        font-size: 15px;
+    }
+
+
+    .stat-dropdown {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        max-width: 400px;
+        max-height: 80vh;
+    }
+
+    .stat-dropdown ul.multi-col {
+        min-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
 }
 
-/* =========================================================
-   CELULAR PEQUENO — 480px
-========================================================= */
+
+
 @media (max-width: 480px) {
-    header .logo { width: 75px; }
-    .perfil-hero { padding: 18px; border-radius: 12px; }
-    .perfil-foto { max-width: 180px; }
-    .perfil-dados h1 { font-size: 22px; }
-    .perfil-acoes .btn { width: 100%; }
+    header .logo {
+        width: 75px;
+    }
 
-    .stat-card { padding: 16px 10px; }
-    .stat-card strong { font-size: 22px; }
-    .stat-card span { font-size: 11px; }
+    .perfil-hero {
+        padding: 18px;
+        border-radius: 12px;
+    }
 
-    .bloco { padding: 18px; }
+    .perfil-foto {
+        max-width: 180px;
+    }
+
+    .perfil-dados h1 {
+        font-size: 22px;
+    }
+
+    .perfil-acoes .btn {
+        width: 100%;
+    }
+
+    .stat-card {
+        padding: 16px 10px;
+    }
+
+    .stat-card strong {
+        font-size: 22px;
+    }
+
+    .stat-card span {
+        font-size: 11px;
+    }
+
+    .bloco {
+        padding: 18px;
+    }
 
     .info-lista li {
         flex-direction: column;
@@ -460,91 +646,361 @@ header #bnt-voltar a:hover {
         gap: 2px;
         font-size: 14px;
     }
-    .info-lista strong { text-align: left; }
 
-    .conquistas li { font-size: 14px; padding: 12px 14px; }
+    .info-lista strong {
+        text-align: left;
+    }
+
+    .conquistas li {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
 }
 
-/* =========================================================
-   TELAS GRANDES — 1440px+
-========================================================= */
+
 @media (min-width: 1440px) {
-    .perfil-hero { grid-template-columns: 340px 1fr; gap: 50px; padding: 40px; }
-    .perfil-dados h1 { font-size: 46px; }
-    .perfil-esporte { font-size: 16px; }
-    .perfil-bio { font-size: 18px; max-width: 70ch; }
-    .perfil-tags li { font-size: 15px; padding: 7px 16px; }
-    .btn { font-size: 18px; padding: 14px 30px; }
-    .stat-card strong { font-size: 34px; }
-    .stat-card span { font-size: 13px; }
-    .bloco { padding: 32px; }
-    .bloco h2 { font-size: 18px; }
-    .info-lista li, .conquistas li { font-size: 17px; }
+    .perfil-hero {
+        grid-template-columns: 340px 1fr;
+        gap: 50px;
+        padding: 40px;
+    }
+
+    .perfil-dados h1 {
+        font-size: 46px;
+    }
+
+    .perfil-esporte {
+        font-size: 16px;
+    }
+
+    .perfil-bio {
+        font-size: 18px;
+        max-width: 70ch;
+    }
+
+    .perfil-tags li {
+        font-size: 15px;
+        padding: 7px 16px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 14px 30px;
+    }
+
+    .stat-card strong {
+        font-size: 34px;
+    }
+
+    .stat-card span {
+        font-size: 13px;
+    }
+
+    .bloco {
+        padding: 32px;
+    }
+
+    .bloco h2 {
+        font-size: 18px;
+    }
+
+    .info-lista li, .conquistas li {
+        font-size: 17px;
+    }
 }
 
-/* =========================================================
-   TELAS MUITO GRANDES — 2560px+
-========================================================= */
+
 @media (min-width: 2560px) {
-    header .titulo h1 { font-size: 34px; margin-left: 80px; }
-    header .logo { width: 12%; }
-    header #bnt-voltar a { font-size: 24px; padding: 12px 22px; }
+    header .titulo h1 {
+        font-size: 34px;
+        margin-left: 80px;
+    }
 
-    .perfil-hero { grid-template-columns: 420px 1fr; gap: 70px; padding: 55px; border-radius: 22px; }
-    .perfil-foto img { border-width: 5px; border-radius: 18px; }
-    .selo-nivel { font-size: 15px; padding: 8px 18px; bottom: 18px; left: 18px; }
-    .perfil-esporte { font-size: 20px; letter-spacing: 3px; }
-    .perfil-dados h1 { font-size: 62px; }
-    .perfil-bio { font-size: 22px; max-width: 75ch; }
-    .perfil-tags li { font-size: 19px; padding: 10px 22px; border-radius: 26px; }
-    .btn { font-size: 22px; padding: 18px 40px; border-radius: 12px; }
+    .logo-link {
+        width: 12%;
+    }
 
-    .stats-grid { gap: 30px; margin-top: 34px; }
-    .stat-card { padding: 32px 20px; border-radius: 14px; }
-    .stat-card strong { font-size: 46px; }
-    .stat-card span { font-size: 16px; letter-spacing: 1.5px; }
+    header #bnt-voltar a {
+        font-size: 24px;
+        padding: 12px 22px;
+    }
 
-    .perfil-grid { gap: 30px; margin-top: 30px; }
-    .bloco { padding: 44px; border-radius: 14px; }
-    .bloco h2 { font-size: 24px; padding-bottom: 14px; margin-bottom: 22px; }
-    .info-lista li { font-size: 22px; padding: 16px 0; }
-    .conquistas li { font-size: 22px; padding: 20px 24px; border-left-width: 6px; border-radius: 12px; }
-    .conquistas .medalha { font-size: 26px; }
-    .rodape-voltar { margin-top: 40px; }
+    .perfil-hero {
+        grid-template-columns: 420px 1fr;
+        gap: 70px;
+        padding: 55px;
+        border-radius: 22px;
+    }
+
+    .perfil-foto img {
+        border-width: 5px;
+        border-radius: 18px;
+    }
+
+    .selo-nivel {
+        font-size: 15px;
+        padding: 8px 18px;
+        bottom: 18px;
+        left: 18px;
+    }
+
+    .perfil-esporte {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .perfil-dados h1 {
+        font-size: 62px;
+    }
+
+    .perfil-bio {
+        font-size: 22px;
+        max-width: 75ch;
+    }
+
+    .perfil-tags li {
+        font-size: 19px;
+        padding: 10px 22px;
+        border-radius: 26px;
+    }
+
+    .btn {
+        font-size: 22px;
+        padding: 18px 40px;
+        border-radius: 12px;
+    }
+
+    .stats-grid {
+        gap: 30px;
+        margin-top: 34px;
+    }
+
+    .stat-card {
+        padding: 32px 20px;
+        border-radius: 14px;
+    }
+
+    .stat-card strong {
+        font-size: 46px;
+    }
+
+    .stat-card span {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
+
+    .stat-dropdown {
+        min-width: 280px;
+        max-width: 380px;
+    }
+
+    .stat-dropdown ul.multi-col {
+        min-width: 600px;
+        max-width: 750px;
+    }
+
+    .stat-dropdown li {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    .perfil-grid {
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .bloco {
+        padding: 44px;
+        border-radius: 14px;
+    }
+
+    .bloco h2 {
+        font-size: 24px;
+        padding-bottom: 14px;
+        margin-bottom: 22px;
+    }
+
+    .info-lista li {
+        font-size: 22px;
+        padding: 16px 0;
+    }
+
+    .conquistas li {
+        font-size: 22px;
+        padding: 20px 24px;
+        border-left-width: 6px;
+        border-radius: 12px;
+    }
+
+    .conquistas .medalha {
+        font-size: 26px;
+    }
+
+    .rodape-voltar {
+        margin-top: 40px;
+    }
 }
 
-/* =========================================================
-   ULTRAWIDE — 3000px+
-========================================================= */
+
 @media (min-width: 3000px) {
-    header { padding: 2rem 6%; min-height: 20vh; }
-    header .titulo h1 { font-size: 46px; margin-left: 110px; }
-    header .logo { width: 14%; }
-    header #bnt-voltar a { font-size: 32px; padding: 16px 30px; letter-spacing: 4px; }
+    header {
+        padding: 2rem 6%;
+        min-height: 20vh;
+    }
 
-    .main { padding: 70px 6% 120px; }
-    .perfil-hero { grid-template-columns: 520px 1fr; gap: 90px; padding: 70px; border-radius: 28px; }
-    .perfil-foto img { border-width: 6px; border-radius: 22px; }
-    .selo-nivel { font-size: 20px; padding: 10px 24px; bottom: 24px; left: 24px; border-radius: 28px; }
-    .perfil-esporte { font-size: 26px; letter-spacing: 4px; }
-    .perfil-dados h1 { font-size: 82px; margin: 12px 0 18px; }
-    .perfil-bio { font-size: 28px; max-width: 80ch; }
-    .perfil-tags li { font-size: 24px; padding: 14px 28px; border-radius: 32px; }
-    .perfil-acoes { gap: 18px; padding-top: 32px; }
-    .btn { font-size: 28px; padding: 24px 52px; border-radius: 16px; }
+    header .titulo h1 {
+        font-size: 46px;
+        margin-left: 110px;
+    }
 
-    .stats-grid { gap: 40px; margin-top: 44px; }
-    .stat-card { padding: 44px 28px; border-radius: 18px; }
-    .stat-card strong { font-size: 60px; }
-    .stat-card span { font-size: 20px; letter-spacing: 2px; margin-top: 10px; }
+    .logo-link {
+        width: 14%;
+    }
 
-    .perfil-grid { gap: 40px; margin-top: 40px; }
-    .bloco { padding: 60px; border-radius: 20px; }
-    .bloco h2 { font-size: 32px; padding-bottom: 18px; margin-bottom: 28px; border-bottom-width: 3px; }
-    .info-lista li { font-size: 28px; padding: 22px 0; border-bottom-width: 2px; }
-    .conquistas { gap: 18px; }
-    .conquistas li { font-size: 28px; padding: 26px 32px; border-left-width: 8px; border-radius: 16px; }
-    .conquistas .medalha { font-size: 34px; }
-    .rodape-voltar { margin-top: 50px; }
-    .toast { font-size: 20px; padding: 20px 32px; border-radius: 12px; bottom: 40px; right: 40px; }
+    header #bnt-voltar a {
+        font-size: 32px;
+        padding: 16px 30px;
+        letter-spacing: 4px;
+    }
+
+    .main {
+        padding: 70px 6% 120px;
+    }
+
+    .perfil-hero {
+        grid-template-columns: 520px 1fr;
+        gap: 90px;
+        padding: 70px;
+        border-radius: 28px;
+    }
+
+    .perfil-foto img {
+        border-width: 6px;
+        border-radius: 22px;
+    }
+
+    .selo-nivel {
+        font-size: 20px;
+        padding: 10px 24px;
+        bottom: 24px;
+        left: 24px;
+        border-radius: 28px;
+    }
+
+    .perfil-esporte {
+        font-size: 26px;
+        letter-spacing: 4px;
+    }
+
+    .perfil-dados h1 {
+        font-size: 82px;
+        margin: 12px 0 18px;
+    }
+
+    .perfil-bio {
+        font-size: 28px;
+        max-width: 80ch;
+    }
+
+    .perfil-tags li {
+        font-size: 24px;
+        padding: 14px 28px;
+        border-radius: 32px;
+    }
+
+    .perfil-acoes {
+        gap: 18px;
+        padding-top: 32px;
+    }
+
+    .btn {
+        font-size: 28px;
+        padding: 24px 52px;
+        border-radius: 16px;
+    }
+
+    .stats-grid {
+        gap: 40px;
+        margin-top: 44px;
+    }
+
+    .stat-card {
+        padding: 44px 28px;
+        border-radius: 18px;
+    }
+
+    .stat-card strong {
+        font-size: 60px;
+    }
+
+    .stat-card span {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+    }
+
+    .stat-dropdown {
+        min-width: 350px;
+        max-width: 480px;
+    }
+
+    .stat-dropdown ul.multi-col {
+        min-width: 750px;
+        max-width: 950px;
+    }
+
+    .stat-dropdown li {
+        font-size: 20px;
+        padding: 14px 22px;
+    }
+
+    .perfil-grid {
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .bloco {
+        padding: 60px;
+        border-radius: 20px;
+    }
+
+    .bloco h2 {
+        font-size: 32px;
+        padding-bottom: 18px;
+        margin-bottom: 28px;
+        border-bottom-width: 3px;
+    }
+
+    .info-lista li {
+        font-size: 28px;
+        padding: 22px 0;
+        border-bottom-width: 2px;
+    }
+
+    .conquistas {
+        gap: 18px;
+    }
+
+    .conquistas li {
+        font-size: 28px;
+        padding: 26px 32px;
+        border-left-width: 8px;
+        border-radius: 16px;
+    }
+
+    .conquistas .medalha {
+        font-size: 34px;
+    }
+
+    .rodape-voltar {
+        margin-top: 50px;
+    }
+
+    .toast {
+        font-size: 20px;
+        padding: 20px 32px;
+        border-radius: 12px;
+        bottom: 40px;
+        right: 40px;
+    }
 }

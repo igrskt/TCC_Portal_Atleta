@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status de Conexão - Supabase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f9;
+        }
+       
+        /* Estilo do card de status */
+        #status {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            color: #333333;
+            transition: all 0.3s ease;
+        }
+
+        /* Classes de estado */
+        .sucesso {
+            background-color: #d4edda !important;
+            color: #155724 !important;
+            border: 2px solid #c3e6cb;
+        }
+
+        .erro {
+            background-color: #f8d7da !important;
+            color: #721c24 !important;
+            border: 2px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Apenas a mensagem centralizada na tela -->
+    <div id="status">Puxando dados da tabela usuario...</div>
+
+    <script>
+        // 1. URL Corrigida (sem o /rest/v1/ no final)
+        const SUPABASE_URL = "https://jsnlpjwzkcrwgwinycvi.supabase.co";
+        const SUPABASE_ANON_KEY = "sb_publishable_bkdw3k-JBiKlTqrGSmqPCw_jUlFI9kc";
+
+        async function puxarTabelaUsuario() {
+            const statusDiv = document.getElementById("status");
+
+            try {
+                // 2. Rota apontando diretamente para a tabela usuario puxando todas as colunas (*), 
+                // e adicionando o cabeçalho obrigatório 'Authorization' que o Supabase exige para tabelas de dados.
+                const resposta = await fetch(`${SUPABASE_URL}/rest/v1/usuario?select=*`, {
+                    method: "GET",
+                    headers: {
+                        "apikey": SUPABASE_ANON_KEY,
+                        "Authorization": `Bearer ${SUPABASE_ANON_KEY}`
+                    }
+                });
+                
+                if (resposta.ok) {
+                    const dados = await resposta.json();
+                    
+                    // Mostra os dados retornados no Console do seu navegador (F12)
+                    console.log("Usuários retornados:", dados);
+
+                    statusDiv.textContent = `Sucesso! Encontrados ${dados.length} usuários na tabela.`;
+                    statusDiv.className = "sucesso";
+                } else {
+                    statusDiv.textContent = `Erro na API: ${resposta.status} (${resposta.statusText})`;
+                    statusDiv.className = "erro";
+                }
+            } catch (erro) {
+                statusDiv.textContent = "Falha de conexão com o Supabase.";
+                statusDiv.className = "erro";
+                console.error(erro);
+            }
+        }
+
+        puxarTabelaUsuario();
+    </script>
+</body>
+</html>
