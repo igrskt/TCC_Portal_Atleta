@@ -1,290 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informativo Skate</title>
+    <title>Atletas Skate</title>
     <link rel="stylesheet" href="PaginaAtletaSkate.css">
 </head>
-
 <body>
 
-    <header>
-        <div class="header-left">
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir filtros">☰</button>
-            <div class="titulo">
-                <h1>SKATE</h1>
-            </div>
-            <a href="#" class="link-pagAtleta" id="openFilters">Filtros</a>
-        </div>
-
-        <img src="PortalAtleta.png" alt="logo" class="logo">
-
-        <div id="bnt-voltar">
-            <a href="InformativoSkate.html">Voltar</a>
-        </div>
-    </header>
-
-   
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    
-    <div class="layout">
-
-        
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h3>🔎 Filtros</h3>
-                <button class="close-sidebar" id="closeSidebar">✕</button>
-            </div>
-
-            
-            <div class="filter-section">
-                <div class="filter-title" onclick="toggleFilter(this)">
-                    Modalidade <span class="arrow">▼</span>
-                </div>
-                <div class="filter-content">
-                    <label class="check-item">
-                        <input type="checkbox" checked>
-                        <span class="checkmark"></span>
-                        Street <span class="count">12</span>
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Park <span class="count">08</span>
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Vertical <span class="count">05</span>
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Freestyle <span class="count">04</span>
-                    </label>
-                </div>
-            </div>
-
-            
-            <div class="filter-section">
-                <div class="filter-title" onclick="toggleFilter(this)">
-                    Nível <span class="arrow">▼</span>
-                </div>
-                <div class="filter-content">
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Iniciante
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox" checked>
-                        <span class="checkmark"></span>
-                        Intermediário
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Avançado
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Profissional
-                    </label>
-                </div>
-            </div>
-
-           
-
-            <button class="clear-btn" onclick="limparFiltros()">✕ Limpar Filtros</button>
-        </aside>
-
-        
-        <main class="main">
-
-            <div class="page-title">
-                <h2>Atletas de Skate</h2>
-                <span class="results">4 atletas</span>
-            </div>
-
-            <div class="cards-grid">
-
-                
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="PaginaAtletaSkate.png" alt="Atleta 1">
-                            <h3>Atleta</h3>
-                            <p>Skatista desde os 11 anos.</p>
-                            <span class="idade">29 Anos</span>
-                            <button class="btn"><a href="perfilAtletaSkate1.html">Ver Página</a></button>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Atleta</h3>
-                            <ul>
-                                <li><strong>Modalidade:</strong> Street</li>
-                                <li><strong>Patrocínio:</strong> MiniStore</li>
-                                <li><strong>Nível:</strong> Profissional</li>
-                            </ul>
-                            <button class="btn"><a href="perfilAtletaSkate1.html">Ver Página</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ===== CARD 2 ===== -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="PaginaAtletaSkate.png" alt="Atleta 2">
-                            <h3>Atleta</h3>
-                            <p>Skatista desde os 11 anos.</p>
-                            <span class="idade">29 Anos</span>
-                            <button class="btn"><a href="perfilAtletaSkate2.html">Ver Página</a></button>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Atleta</h3>
-                            <ul>
-                                <li><strong>Modalidade:</strong> Park</li>
-                                <li><strong>Patrocínio:</strong> MiniStore</li>
-                                <li><strong>Nível:</strong> Profissional</li>
-                            </ul>
-                            <button class="btn"><a href="perfilAtletaSkate2.html">Ver Página</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                    
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="PaginaAtletaSkate.png" alt="Atleta 3">
-                            <h3>Atleta</h3>
-                            <p>Skatista desde os 11 anos, com 5 medalhas de ouro em campeonatos.</p>
-                            <span class="idade">29 Anos</span>
-                            <button class="btn"><a href="perfilAtletaSkate3.html">Ver Página</a></button>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Atleta</h3>
-                            <ul>
-                                <li><strong>Modalidade:</strong> Vertical</li>
-                                <li><strong>Conquistas:</strong> 🥇🥇🥈🥈🥉</li>
-                                <li><strong>Patrocínio:</strong> MiniStore</li>
-                                <li><strong>Nível:</strong> Avançado</li>
-                            </ul>
-                            <button class="btn"><a href="perfilAtletaSkate3.html">Ver Página</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="PaginaAtletaSkate.png" alt="Atleta 4">
-                            <h3>Atleta</h3>
-                            <p>Skatista desde os 11 anos.</p>
-                            <span class="idade">29 Anos</span>
-                            <button class="btn"><a href="perfilAtletaSkate4.html">Ver Página</a></button>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Atleta</h3>
-                            <ul>
-                                <li><strong>Modalidade:</strong> Street</li>
-                                <li><strong>Patrocínio:</strong> MiniStore</li>
-                                <li><strong>Nível:</strong> Profissional</li>
-                            </ul>
-                            <button class="btn"><a href="perfilAtletaSkate4.html">Ver Página</a></button>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </main>
+<header>
+    <div class="header-left">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir filtros">☰</button>
+        <div class="titulo"><h1>SKATE</h1></div>
+        <a href="#" class="link-pagAtleta" id="openFilters">Filtros</a>
     </div>
+    <img src="PortalAtleta.png" alt="logo" class="logo">
+    <div id="bnt-voltar"><a href="InformativoSkate.html">Voltar</a></div>
+</header>
 
-   
-    <div class="toast" id="toast"></div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    
-    <script>
-        
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebarOverlay');
-        const menuToggle = document.getElementById('menuToggle');
-        const closeBtn = document.getElementById('closeSidebar');
-        const openFilters = document.getElementById('openFilters');
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>🔎 Filtros</h3>
+            <button class="close-sidebar" id="closeSidebar">✕</button>
+        </div>
 
-        function abrirSidebar() {
-            sidebar.classList.add('open');
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+        <div class="filter-section">
+            <div class="filter-title" onclick="toggleFilter(this)">
+                Modalidade <span class="arrow">▼</span>
+            </div>
+            <div class="filter-content">
+                <label class="check-item"><input type="checkbox" data-filtro="modalidade" value="Street"><span class="checkmark"></span> Street <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="modalidade" value="Park"><span class="checkmark"></span> Park <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="modalidade" value="Vertical"><span class="checkmark"></span> Vertical <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="modalidade" value="Freestyle"><span class="checkmark"></span> Freestyle <span class="count">0</span></label>
+            </div>
+        </div>
 
-        function fecharSidebar() {
-            sidebar.classList.remove('open');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+        <div class="filter-section">
+            <div class="filter-title" onclick="toggleFilter(this)">
+                Nível <span class="arrow">▼</span>
+            </div>
+            <div class="filter-content">
+                <label class="check-item"><input type="checkbox" data-filtro="nivel" value="Iniciante"><span class="checkmark"></span> Iniciante <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="nivel" value="Intermediário"><span class="checkmark"></span> Intermediário <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="nivel" value="Avançado"><span class="checkmark"></span> Avançado <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="nivel" value="Profissional"><span class="checkmark"></span> Profissional <span class="count">0</span></label>
+            </div>
+        </div>
 
-        menuToggle.addEventListener('click', abrirSidebar);
-        openFilters.addEventListener('click', (e) => {
-            e.preventDefault();
-            abrirSidebar();
-        });
-        closeBtn.addEventListener('click', fecharSidebar);
-        overlay.addEventListener('click', fecharSidebar);
+        <button class="clear-btn" onclick="limparFiltros()">✕ Limpar Filtros</button>
+    </aside>
 
+    <main class="main">
+        <div class="page-title">
+            <h2>Atletas de Skate</h2>
+            <span class="results">4 atletas</span>
+        </div>
 
-        function toggleFilter(el) {
-            const content = el.nextElementSibling;
-            const arrow = el.querySelector('.arrow');
-            content.classList.toggle('collapsed');
-            arrow.classList.toggle('rotate');
-        }
+        <div class="cards-grid">
 
-        
-        const cards = document.querySelectorAll('.flip-card');
-        cards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                // para n  flipar se clicar no botão
-                if (e.target.classList.contains('btn')) return;
-                card.classList.toggle('flipped');
-            });
-        });
+            <div class="flip-card" data-modalidade="Street" data-nivel="Profissional">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="PaginaAtletaSkate.png" alt="Pedro Henrique">
+                        <h3>Pedro Henrique</h3>
+                        <p>Skatista desde os 11 anos.</p>
+                        <span class="idade">29 Anos</span>
+                        <button class="btn"><a href="perfilAtletaSkate1.html">Ver Página</a></button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Pedro Henrique</h3>
+                        <ul>
+                            <li><strong>Modalidade:</strong> Street</li>
+                            <li><strong>Patrocínio:</strong> MiniStore</li>
+                            <li><strong>Nível:</strong> Profissional</li>
+                            <li><strong>Cidade:</strong> São Paulo - SP</li>
+                        </ul>
+                        <button class="btn"><a href="perfilAtletaSkate1.html">Ver Página</a></button>
+                    </div>
+                </div>
+            </div>
 
-        
-        function limparFiltros() {
-            document.querySelectorAll('.sidebar input[type="checkbox"]').forEach(c => c.checked = false);
-            document.getElementById('idadeMin').value = '';
-            document.getElementById('idadeMax').value = '';
-            showToast('Filtros limpos!');
-        }
+            <div class="flip-card" data-modalidade="Park" data-nivel="Profissional">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="PaginaAtletaSkate.png" alt="Gabriel Souza">
+                        <h3>Gabriel Souza</h3>
+                        <p>Skatista desde os 11 anos.</p>
+                        <span class="idade">29 Anos</span>
+                        <button class="btn"><a href="perfilAtletaSkate2.html">Ver Página</a></button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Gabriel Souza</h3>
+                        <ul>
+                            <li><strong>Modalidade:</strong> Park</li>
+                            <li><strong>Patrocínio:</strong> MiniStore</li>
+                            <li><strong>Nível:</strong> Profissional</li>
+                            <li><strong>Cidade:</strong> Rio de Janeiro - RJ</li>
+                        </ul>
+                        <button class="btn"><a href="perfilAtletaSkate2.html">Ver Página</a></button>
+                    </div>
+                </div>
+            </div>
 
-        
-        let toastTimer;
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            toast.textContent = msg;
-            toast.classList.add('show');
-            clearTimeout(toastTimer);
-            toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
-        }
+            <div class="flip-card" data-modalidade="Vertical" data-nivel="Avançado">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="PaginaAtletaSkate.png" alt="Marina Lopes">
+                        <h3>Marina Lopes</h3>
+                        <p>Skatista desde os 11 anos, com 5 medalhas de ouro em campeonatos.</p>
+                        <span class="idade">29 Anos</span>
+                        <button class="btn"><a href="perfilAtletaSkate3.html">Ver Página</a></button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Marina Lopes</h3>
+                        <ul>
+                            <li><strong>Modalidade:</strong> Vertical</li>
+                            <li><strong>Conquistas:</strong> 🥇🥇🥈🥈🥉</li>
+                            <li><strong>Patrocínio:</strong> MiniStore</li>
+                            <li><strong>Nível:</strong> Avançado</li>
+                            <li><strong>Cidade:</strong> Curitiba - PR</li>
+                        </ul>
+                        <button class="btn"><a href="perfilAtletaSkate3.html">Ver Página</a></button>
+                    </div>
+                </div>
+            </div>
 
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') fecharSidebar();
-        });
+            <div class="flip-card" data-modalidade="Street" data-nivel="Profissional">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="PaginaAtletaSkate.png" alt="Vinícius Ramos">
+                        <h3>Vinícius Ramos</h3>
+                        <p>Skatista desde os 11 anos.</p>
+                        <span class="idade">29 Anos</span>
+                        <button class="btn"><a href="perfilAtletaSkate4.html">Ver Página</a></button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Vinícius Ramos</h3>
+                        <ul>
+                            <li><strong>Modalidade:</strong> Street</li>
+                            <li><strong>Patrocínio:</strong> MiniStore</li>
+                            <li><strong>Nível:</strong> Profissional</li>
+                            <li><strong>Cidade:</strong> Belo Horizonte - MG</li>
+                        </ul>
+                        <button class="btn"><a href="perfilAtletaSkate4.html">Ver Página</a></button>
+                    </div>
+                </div>
+            </div>
 
-        
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 900) fecharSidebar();
-        });
-    </script>
+        </div>
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ====== Sidebar ====== */
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('sidebarOverlay');
+const menuToggle = document.getElementById('menuToggle');
+const closeBtn = document.getElementById('closeSidebar');
+const openFilters = document.getElementById('openFilters');
+
+function abrirSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function fecharSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+menuToggle.addEventListener('click', abrirSidebar);
+openFilters.addEventListener('click', e => { e.preventDefault(); abrirSidebar(); });
+closeBtn.addEventListener('click', fecharSidebar);
+overlay.addEventListener('click', fecharSidebar);
+
+/* ====== Collapse ====== */
+function toggleFilter(el) {
+    const content = el.nextElementSibling;
+    const arrow = el.querySelector('.arrow');
+    content.classList.toggle('collapsed');
+    arrow.classList.toggle('rotate');
+}
+
+/* ====== Flip ====== */
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', e => {
+        if (e.target.closest('.btn')) return;
+        card.classList.toggle('flipped');
+    });
+});
+
+/* ====== Filtros ====== */
+const estado = {};
+const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"][data-filtro]');
+
+checkboxes.forEach(cb => {
+    const cat = cb.dataset.filtro;
+    if (!estado[cat]) estado[cat] = new Set();
+    cb.addEventListener('change', () => {
+        if (cb.checked) estado[cat].add(cb.value);
+        else estado[cat].delete(cb.value);
+        aplicarFiltros();
+    });
+});
+
+function cardPassa(card) {
+    for (const cat in estado) {
+        const sel = estado[cat];
+        if (sel.size === 0) continue;
+        const vals = (card.dataset[cat] || '').split('|').map(s => s.trim());
+        if (!vals.some(v => sel.has(v))) return false;
+    }
+    return true;
+}
+
+function aplicarFiltros() {
+    const cards = document.querySelectorAll('.flip-card');
+    const counter = document.querySelector('.results');
+    let visiveis = 0;
+    cards.forEach(card => {
+        const ok = cardPassa(card);
+        card.style.display = ok ? '' : 'none';
+        if (ok) visiveis++;
+    });
+    if (counter) counter.textContent = visiveis + (visiveis === 1 ? ' atleta' : ' atletas');
+}
+
+function contarPorValor(cat, valor) {
+    return Array.from(document.querySelectorAll('.flip-card')).filter(card => {
+        const vals = (card.dataset[cat] || '').split('|').map(s => s.trim());
+        return vals.includes(valor);
+    }).length;
+}
+
+function atualizarContadores() {
+    checkboxes.forEach(cb => {
+        const cat = cb.dataset.filtro;
+        const span = cb.closest('.check-item').querySelector('.count');
+        if (!span) return;
+        const n = contarPorValor(cat, cb.value);
+        span.textContent = String(n).padStart(2, '0');
+    });
+}
+
+/* ====== Limpar (corrigido — sem idadeMin/idadeMax) ====== */
+function limparFiltros() {
+    checkboxes.forEach(cb => {
+        cb.checked = false;
+        const cat = cb.dataset.filtro;
+        if (estado[cat]) estado[cat].clear();
+    });
+    aplicarFiltros();
+    showToast('Filtros limpos!');
+}
+
+/* ====== Toast ====== */
+let toastTimer;
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+}
+
+/* ====== Atalhos ====== */
+document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharSidebar(); });
+window.addEventListener('resize', () => { if (window.innerWidth > 900) fecharSidebar(); });
+
+/* ====== Init ====== */
+document.addEventListener('DOMContentLoaded', () => {
+    atualizarContadores();
+    aplicarFiltros();
+});
+</script>
 
 </body>
-
 </html>

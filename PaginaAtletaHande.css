@@ -37,7 +37,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    min-height: 18vh;
+    min-height: 16vh;
     position: relative;
     z-index: 100;
 }
@@ -75,8 +75,8 @@ header .link-pagAtleta:hover {
 
 header .logo {
     display: block;
-    margin-top: 3rem;
-    width: 10%;
+    top: 25%;
+    width: 130px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -432,8 +432,8 @@ header #bnt-voltar a:hover {
     transition: box-shadow 0.3s ease;
 }
 
-.flip-card-front a ,
-.flip-card-back a{
+.flip-card-front a,
+.flip-card-back a {
     text-decoration: none;
 }
 

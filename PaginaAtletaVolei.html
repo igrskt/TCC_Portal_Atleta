@@ -1,265 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atletas Vôlei de Areia</title>
     <link rel="stylesheet" href="PaginaAtletaVolei.css">
 </head>
-
 <body>
 
-    <header>
-        <div class="header-left">
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir filtros">☰</button>
-            <div class="titulo">
-                <h1>VÔLEI DE AREIA</h1>
-            </div>
-            <a href="#" class="link-pagAtleta" id="openFilters">Filtros</a>
-        </div>
-
-        <img src="PortalAtleta.png" alt="logo" class="logo">
-
-        <div id="bnt-voltar">
-            <a href="informativoVolei.html">Voltar</a>
-        </div>
-    </header>
-
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    <div class="layout">
-
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h3>🔎 Filtros</h3>
-                <button class="close-sidebar" id="closeSidebar">✕</button>
-            </div>
-
-            <div class="filter-section">
-                <div class="filter-title" onclick="toggleFilter(this)">
-                    Categoria <span class="arrow">▼</span>
-                </div>
-                <div class="filter-content">
-                    <label class="check-item">
-                        <input type="checkbox" checked>
-                        <span class="checkmark"></span>
-                        Duplas Masculinas <span class="count">14</span>
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Duplas Femininas <span class="count">16</span>
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Duplas Mistas <span class="count">09</span>
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        4x4 <span class="count">06</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="filter-section">
-                <div class="filter-title" onclick="toggleFilter(this)">
-                    Nível <span class="arrow">▼</span>
-                </div>
-                <div class="filter-content">
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Iniciante
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox" checked>
-                        <span class="checkmark"></span>
-                        Intermediário
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Avançado
-                    </label>
-                    <label class="check-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Profissional
-                    </label>
-                </div>
-            </div>
-
-            <button class="clear-btn" onclick="limparFiltros()">✕ Limpar Filtros</button>
-        </aside>
-
-        <main class="main">
-
-            <div class="page-title">
-                <h2>Atletas de Vôlei de Areia</h2>
-                <span class="results">4 atletas</span>
-            </div>
-
-            <div class="cards-grid">
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="PaginaAtletaVolei.png" alt="Atleta 1">
-                            <h3>Atleta</h3>
-                            <p>Jogador de vôlei de areia há 5 anos.</p>
-                            <span class="idade">25 Anos</span>
-                            <button class="btn"><a href="perfilAtletaVolei1.html">Ver Página</a></button>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Atleta</h3>
-                            <ul>
-                                <li><strong>Categoria:</strong> Duplas Masculinas</li>
-                                <li><strong>Patrocínio:</strong> SunSand</li>
-                                <li><strong>Nível:</strong> Profissional</li>
-                            </ul>
-                            <button class="btn"><a href="perfilAtletaVolei1.html">Ver Página</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="PaginaAtletaVolei.png" alt="Atleta 2">
-                            <h3>Atleta</h3>
-                            <p>Especialista em bloqueio e ataque.</p>
-                            <span class="idade">27 Anos</span>
-                            <button class="btn"><a href="perfilAtletaVolei2.html">Ver Página</a></button>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Atleta</h3>
-                            <ul>
-                                <li><strong>Categoria:</strong> Duplas Femininas</li>
-                                <li><strong>Patrocínio:</strong> Beach Life</li>
-                                <li><strong>Nível:</strong> Profissional</li>
-                            </ul>
-                            <button class="btn"><a href="perfilAtletaVolei2.html">Ver Página</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="PaginaAtletaVolei.png" alt="Atleta 3">
-                            <h3>Atleta</h3>
-                            <p>Campeão do circuito estadual de vôlei de areia.</p>
-                            <span class="idade">22 Anos</span>
-                            <button class="btn"><a href="perfilAtletaVolei3.html">Ver Página</a></button>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Atleta</h3>
-                            <ul>
-                                <li><strong>Categoria:</strong> Duplas Masculinas</li>
-                                <li><strong>Conquistas:</strong> 🥇🥈🥉</li>
-                                <li><strong>Patrocínio:</strong> Energy Drink</li>
-                                <li><strong>Nível:</strong> Avançado</li>
-                            </ul>
-                            <button class="btn"><a href="perfilAtletaVolei3.html">Ver Página</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="PaginaAtletaVolei.png" alt="Atleta 4">
-                            <h3>Atleta</h3>
-                            <p>Jogadora versátil, atua em todas as posições.</p>
-                            <span class="idade">24 Anos</span>
-                            <button class="btn"><a href="perfilAtletaVolei4.html">Ver Página</a></button>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Atleta</h3>
-                            <ul>
-                                <li><strong>Categoria:</strong> Duplas Femininas</li>
-                                <li><strong>Patrocínio:</strong> Local Store</li>
-                                <li><strong>Nível:</strong> Intermediário</li>
-                            </ul>
-                            <button class="btn"><a href="perfilAtletaVolei4.html">Ver Página</a></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </main>
+<header>
+    <div class="header-left">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir filtros">☰</button>
+        <div class="titulo"><h1>VÔLEI DE AREIA</h1></div>
+        <a href="#" class="link-pagAtleta" id="openFilters">Filtros</a>
     </div>
+    <img src="PortalAtleta.png" alt="logo" class="logo">
+    <div id="bnt-voltar"><a href="informativoVolei.html">Voltar</a></div>
+</header>
 
-    <div class="toast" id="toast"></div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <script>
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebarOverlay');
-        const menuToggle = document.getElementById('menuToggle');
-        const closeBtn = document.getElementById('closeSidebar');
-        const openFilters = document.getElementById('openFilters');
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>🔎 Filtros</h3>
+            <button class="close-sidebar" id="closeSidebar">✕</button>
+        </div>
 
-        function abrirSidebar() {
-            sidebar.classList.add('open');
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+        <div class="filter-section">
+            <div class="filter-title" onclick="toggleFilter(this)">
+                Categoria <span class="arrow">▼</span>
+            </div>
+            <div class="filter-content">
+                <label class="check-item"><input type="checkbox" data-filtro="categoria" value="Duplas Masculinas"><span class="checkmark"></span> Duplas Masculinas <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="categoria" value="Duplas Femininas"><span class="checkmark"></span> Duplas Femininas <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="categoria" value="Duplas Mistas"><span class="checkmark"></span> Duplas Mistas <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="categoria" value="4x4"><span class="checkmark"></span> 4x4 <span class="count">0</span></label>
+            </div>
+        </div>
 
-        function fecharSidebar() {
-            sidebar.classList.remove('open');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+        <div class="filter-section">
+            <div class="filter-title" onclick="toggleFilter(this)">
+                Nível <span class="arrow">▼</span>
+            </div>
+            <div class="filter-content">
+                <label class="check-item"><input type="checkbox" data-filtro="nivel" value="Iniciante"><span class="checkmark"></span> Iniciante <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="nivel" value="Intermediário"><span class="checkmark"></span> Intermediário <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="nivel" value="Avançado"><span class="checkmark"></span> Avançado <span class="count">0</span></label>
+                <label class="check-item"><input type="checkbox" data-filtro="nivel" value="Profissional"><span class="checkmark"></span> Profissional <span class="count">0</span></label>
+            </div>
+        </div>
 
-        menuToggle.addEventListener('click', abrirSidebar);
-        openFilters.addEventListener('click', (e) => {
-            e.preventDefault();
-            abrirSidebar();
-        });
-        closeBtn.addEventListener('click', fecharSidebar);
-        overlay.addEventListener('click', fecharSidebar);
+        <button class="clear-btn" onclick="limparFiltros()">✕ Limpar Filtros</button>
+    </aside>
 
-        function toggleFilter(el) {
-            const content = el.nextElementSibling;
-            const arrow = el.querySelector('.arrow');
-            content.classList.toggle('collapsed');
-            arrow.classList.toggle('rotate');
-        }
+    <main class="main">
+        <div class="page-title">
+            <h2>Atletas de Vôlei de Areia</h2>
+            <span class="results">4 atletas</span>
+        </div>
 
-        const cards = document.querySelectorAll('.flip-card');
-        cards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (e.target.classList.contains('btn')) return;
-                card.classList.toggle('flipped');
-            });
-        });
+        <div class="cards-grid">
 
-        function limparFiltros() {
-            document.querySelectorAll('.sidebar input[type="checkbox"]').forEach(c => c.checked = false);
-            showToast('Filtros limpos!');
-        }
+            <div class="flip-card" data-categoria="Duplas Masculinas" data-nivel="Profissional">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="PaginaAtletaVolei.png" alt="André Lima">
+                        <h3>André Lima</h3>
+                        <p>Jogador de vôlei de areia há 5 anos.</p>
+                        <span class="idade">25 Anos</span>
+                        <button class="btn"><a href="perfilAtletaVolei1.html">Ver Página</a></button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>André Lima</h3>
+                        <ul>
+                            <li><strong>Categoria:</strong> Duplas Masculinas</li>
+                            <li><strong>Patrocínio:</strong> SunSand</li>
+                            <li><strong>Nível:</strong> Profissional</li>
+                            <li><strong>Cidade:</strong> Rio de Janeiro - RJ</li>
+                        </ul>
+                        <button class="btn"><a href="perfilAtletaVolei1.html">Ver Página</a></button>
+                    </div>
+                </div>
+            </div>
 
-        let toastTimer;
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            toast.textContent = msg;
-            toast.classList.add('show');
-            clearTimeout(toastTimer);
-            toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
-        }
+            <div class="flip-card" data-categoria="Duplas Femininas" data-nivel="Profissional">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="PaginaAtletaVolei.png" alt="Beatriz Alves">
+                        <h3>Beatriz Alves</h3>
+                        <p>Especialista em bloqueio e ataque.</p>
+                        <span class="idade">27 Anos</span>
+                        <button class="btn"><a href="perfilAtletaVolei2.html">Ver Página</a></button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Beatriz Alves</h3>
+                        <ul>
+                            <li><strong>Categoria:</strong> Duplas Femininas</li>
+                            <li><strong>Patrocínio:</strong> Beach Life</li>
+                            <li><strong>Nível:</strong> Profissional</li>
+                            <li><strong>Cidade:</strong> Florianópolis - SC</li>
+                        </ul>
+                        <button class="btn"><a href="perfilAtletaVolei2.html">Ver Página</a></button>
+                    </div>
+                </div>
+            </div>
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') fecharSidebar();
-        });
+            <div class="flip-card" data-categoria="Duplas Masculinas" data-nivel="Avançado">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="PaginaAtletaVolei.png" alt="Carlos Eduardo">
+                        <h3>Carlos Eduardo</h3>
+                        <p>Campeão do circuito estadual de vôlei de areia.</p>
+                        <span class="idade">22 Anos</span>
+                        <button class="btn"><a href="perfilAtletaVolei3.html">Ver Página</a></button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Carlos Eduardo</h3>
+                        <ul>
+                            <li><strong>Categoria:</strong> Duplas Masculinas</li>
+                            <li><strong>Conquistas:</strong> 🥇🥈🥉</li>
+                            <li><strong>Patrocínio:</strong> Energy Drink</li>
+                            <li><strong>Nível:</strong> Avançado</li>
+                            <li><strong>Cidade:</strong> Fortaleza - CE</li>
+                        </ul>
+                        <button class="btn"><a href="perfilAtletaVolei3.html">Ver Página</a></button>
+                    </div>
+                </div>
+            </div>
 
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 900) fecharSidebar();
-        });
-    </script>
+            <div class="flip-card" data-categoria="Duplas Femininas" data-nivel="Intermediário">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="PaginaAtletaVolei.png" alt="Larissa Prado">
+                        <h3>Larissa Prado</h3>
+                        <p>Jogadora versátil, atua em todas as posições.</p>
+                        <span class="idade">24 Anos</span>
+                        <button class="btn"><a href="perfilAtletaVolei4.html">Ver Página</a></button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Larissa Prado</h3>
+                        <ul>
+                            <li><strong>Categoria:</strong> Duplas Femininas</li>
+                            <li><strong>Patrocínio:</strong> Local Store</li>
+                            <li><strong>Nível:</strong> Intermediário</li>
+                            <li><strong>Cidade:</strong> Salvador - BA</li>
+                        </ul>
+                        <button class="btn"><a href="perfilAtletaVolei4.html">Ver Página</a></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ====== Sidebar ====== */
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('sidebarOverlay');
+const menuToggle = document.getElementById('menuToggle');
+const closeBtn = document.getElementById('closeSidebar');
+const openFilters = document.getElementById('openFilters');
+
+function abrirSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function fecharSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+menuToggle.addEventListener('click', abrirSidebar);
+openFilters.addEventListener('click', e => { e.preventDefault(); abrirSidebar(); });
+closeBtn.addEventListener('click', fecharSidebar);
+overlay.addEventListener('click', fecharSidebar);
+
+/* ====== Collapse ====== */
+function toggleFilter(el) {
+    const content = el.nextElementSibling;
+    const arrow = el.querySelector('.arrow');
+    content.classList.toggle('collapsed');
+    arrow.classList.toggle('rotate');
+}
+
+/* ====== Flip ====== */
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', e => {
+        if (e.target.closest('.btn')) return;
+        card.classList.toggle('flipped');
+    });
+});
+
+/* ====== Filtros ====== */
+const estado = {};
+const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"][data-filtro]');
+
+checkboxes.forEach(cb => {
+    const cat = cb.dataset.filtro;
+    if (!estado[cat]) estado[cat] = new Set();
+    cb.addEventListener('change', () => {
+        if (cb.checked) estado[cat].add(cb.value);
+        else estado[cat].delete(cb.value);
+        aplicarFiltros();
+    });
+});
+
+function cardPassa(card) {
+    for (const cat in estado) {
+        const sel = estado[cat];
+        if (sel.size === 0) continue;
+        const vals = (card.dataset[cat] || '').split('|').map(s => s.trim());
+        if (!vals.some(v => sel.has(v))) return false;
+    }
+    return true;
+}
+
+function aplicarFiltros() {
+    const cards = document.querySelectorAll('.flip-card');
+    const counter = document.querySelector('.results');
+    let visiveis = 0;
+    cards.forEach(card => {
+        const ok = cardPassa(card);
+        card.style.display = ok ? '' : 'none';
+        if (ok) visiveis++;
+    });
+    if (counter) counter.textContent = visiveis + (visiveis === 1 ? ' atleta' : ' atletas');
+}
+
+function contarPorValor(cat, valor) {
+    return Array.from(document.querySelectorAll('.flip-card')).filter(card => {
+        const vals = (card.dataset[cat] || '').split('|').map(s => s.trim());
+        return vals.includes(valor);
+    }).length;
+}
+
+function atualizarContadores() {
+    checkboxes.forEach(cb => {
+        const cat = cb.dataset.filtro;
+        const span = cb.closest('.check-item').querySelector('.count');
+        if (!span) return;
+        const n = contarPorValor(cat, cb.value);
+        span.textContent = String(n).padStart(2, '0');
+    });
+}
+
+/* ====== Limpar ====== */
+function limparFiltros() {
+    checkboxes.forEach(cb => {
+        cb.checked = false;
+        const cat = cb.dataset.filtro;
+        if (estado[cat]) estado[cat].clear();
+    });
+    aplicarFiltros();
+    showToast('Filtros limpos!');
+}
+
+/* ====== Toast ====== */
+let toastTimer;
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+}
+
+/* ====== Atalhos ====== */
+document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharSidebar(); });
+window.addEventListener('resize', () => { if (window.innerWidth > 900) fecharSidebar(); });
+
+/* ====== Init ====== */
+document.addEventListener('DOMContentLoaded', () => {
+    atualizarContadores();
+    aplicarFiltros();
+});
+</script>
 
 </body>
-
 </html>

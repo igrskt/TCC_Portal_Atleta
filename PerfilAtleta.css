@@ -29,7 +29,7 @@ body {
     color: var(--text);
 }
 
-/* ================= HEADER ================= */
+
 header {
     background-color: var(--primary);
     width: 100%;
@@ -61,7 +61,7 @@ header .titulo h1 {
     left: 50%;
     transform: translateX(-50%);
     top: 1.5rem;
-    width: 10%;
+    width: 9.5%;
     z-index: 10;
     display: block;
 }
@@ -88,7 +88,6 @@ header #bnt-voltar a:hover {
     background-color: gray;
 }
 
-/* ================= BOTÕES ================= */
 .btn {
     font-family: inherit;
     font-size: 16px;
