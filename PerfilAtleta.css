@@ -251,7 +251,7 @@ header #bnt-voltar a:hover {
     text-align: center;
     box-shadow: var(--shadow);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    
+
     position: relative;
     cursor: pointer;
     overflow: visible;
@@ -369,7 +369,7 @@ header #bnt-voltar a:hover {
 }
 
 .bloco h2 {
-    text-align: center; 
+    text-align: center;
     font-size: 16px;
     color: var(--primary);
     letter-spacing: 1px;
@@ -467,8 +467,12 @@ header #bnt-voltar a:hover {
     transform: translateY(0);
 }
 
-
+/* ================= TABLET ================= */
 @media (max-width: 1024px) {
+    header {
+        flex-wrap: nowrap;
+    }
+
     .main {
         padding: 35px 4% 50px;
     }
@@ -496,33 +500,36 @@ header #bnt-voltar a:hover {
     }
 }
 
+/* ================= CELULAR ================= */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        text-align: center;
+        flex-wrap: nowrap;
+        padding: 10px 3%;
         min-height: auto;
-        padding: 15px;
-        gap: 12px;
+        gap: 6px;
+        align-items: center;
+        text-align: left;
     }
 
     header .titulo h1 {
         margin-left: 0;
-        font-size: 22px;
-        margin-top: 10px;
+        margin-top: 0;
+        font-size: 15px;
+        text-align: left;
     }
 
     .logo-link {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        width: 90px;
-        margin: 6px auto;
-        order: -1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 58px;
+        margin: 0;
+        order: 0;
     }
 
     header #bnt-voltar a {
-        font-size: 15px;
+        font-size: 12px;
         padding: 6px 10px;
     }
 
@@ -552,7 +559,8 @@ header #bnt-voltar a:hover {
         margin: 0 auto;
     }
 
-    .perfil-tags, .perfil-acoes {
+    .perfil-tags,
+    .perfil-acoes {
         justify-content: center;
     }
 
@@ -569,7 +577,6 @@ header #bnt-voltar a:hover {
         font-size: 15px;
     }
 
-
     .stat-dropdown {
         position: fixed;
         top: 50%;
@@ -585,25 +592,32 @@ header #bnt-voltar a:hover {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.9);
-        }
-
-        to {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
-    }
 }
 
-
-
+/* ================= CELULAR PEQUENO ================= */
 @media (max-width: 480px) {
-    header .logo {
-        width: 75px;
+    header {
+        padding: 8px 3%;
+    }
+
+    header .titulo h1 {
+        font-size: 13px;
+    }
+
+    .logo-link {
+        width: 50px;
+    }
+
+    header #bnt-voltar a {
+        font-size: 0;
+        padding: 6px 10px;
+        letter-spacing: 0;
+    }
+
+    header #bnt-voltar a::before {
+        content: "⇦";
+        font-size: 15px;
+        letter-spacing: 0;
     }
 
     .perfil-hero {
@@ -654,7 +668,7 @@ header #bnt-voltar a:hover {
         font-size: 14px;
         padding: 12px 14px;
     }
-}
+}a
 
 
 @media (min-width: 1440px) {
@@ -771,7 +785,7 @@ header #bnt-voltar a:hover {
 
     .stats-grid {
         gap: 30px;
-        margin-top: 34px;
+333        margin-top: 34px;
     }
 
     .stat-card {
