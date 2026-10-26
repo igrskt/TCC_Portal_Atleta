@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #570505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 16px 40px;
+}
+
+/* Botão voltar - agora fixado no canto, sempre visível */
+#bnt-voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+#bnt-voltar a {
+    display: inline-block;
+    color: #fff;
+    -webkit-text-stroke: 0.5px #000;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, .3);
+    transition: background .3s;
+}
+
+#bnt-voltar a:hover { background: rgba(255, 255, 255, .3); }
+
+/* Formulário */
+.form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    width: min(100%, 420px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    animation: iniciar .6s ease-out;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    border: 5px solid #000;
+    border-radius: 30px;
+    padding: 8px 15px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.btn-1,
+.btn-2 { width: 100%; }
+
+.btn-1 a,
+.btn-2 a { display: block; text-decoration: none; }
+
+.btn-1 button,
+.btn-2 button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #570505;
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn-1 button:hover,
+.btn-2 button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .2);
+}
+
+.btn-1 button:active,
+.btn-2 button:active { transform: translateY(0); }
+
+@keyframes iniciar {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+    .form { padding: 32px; }
+    .title { font-size: 1.4em; }
+}
+
+/* ================= CELULAR ================= */
+@media (max-width: 768px) {
+    body { padding: 80px 14px 30px; }
+    #bnt-voltar { top: 12px; left: 12px; }
+    #bnt-voltar a { font-size: 15px; padding: 6px 12px; }
+    .form { padding: 25px 22px; border-radius: 10px; }
+    .title { font-size: 1.2em; border-width: 4px; margin-bottom: 18px; }
+    .btn-1 button,
+    .btn-2 button { height: 55px; font-size: 1em; }
+}
+
+/* ================= CELULAR PEQUENO ================= */
+@media (max-width: 480px) {
+    .form { padding: 22px 16px; }
+    .title { font-size: 1.05em; padding: 6px 10px; }
+    .btn-1 button,
+    .btn-2 button { height: 50px; font-size: .95em; }
+}
+
+/* ================= TELAS GRANDES ================= */
+@media (min-width: 1440px) {
+    .form { padding: 55px; width: min(90vw, 480px); }
+    .title { font-size: 1.8em; }
+    .btn-1 button,
+    .btn-2 button { height: 70px; font-size: 1.2em; }
+}
+
+@media (min-width: 2560px) {
+    .form { padding: 70px; width: min(90vw, 600px); }
+    .title { font-size: 2.2em; }
+    .btn-1 button,
+    .btn-2 button { height: 90px; font-size: 1.5em; }
+}
