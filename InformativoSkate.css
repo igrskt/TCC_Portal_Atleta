@@ -31,7 +31,7 @@ header .titulo h1 {
 }
 
 header .link-pagAtleta {
-    color: #fff;
+    color: #eddf24;
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 2px;
@@ -132,6 +132,84 @@ header #bnt-voltar a:hover { background: rgba(255,255,255,.2); }
 #bnt-carrossel button:hover { background: rgba(0,0,0,.8); }
 #prevBtn { left: 10px; }
 #nextBtn { right: 10px; }
+
+footer {
+    background-color: #570505;
+    color: #fff;
+    padding: 20px 7% 20px;
+    font-family: sans-serif;
+}
+
+.Footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Footer-coluna {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.Footer-coluna h2,
+.Footer-coluna h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.Footer-coluna p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.Footer-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Footer-coluna li {
+    margin-bottom: 8px;
+}
+
+.Footer-coluna li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    transition: opacity .2s, color .2s;
+}
+
+.Footer-coluna li a:hover {
+    opacity: 1;
+    color: #67706c;
+}
+
+.Footer-base {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Responsivo do footer */
+@media (max-width: 768px) {
+    .Footer {
+        padding: 40px 5% 20px;
+    }
+
+    .Footer-conteudo {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
 
 @keyframes fade {
     from { opacity: .4; }

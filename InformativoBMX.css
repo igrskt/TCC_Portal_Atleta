@@ -1,4 +1,4 @@
-/* ================= BASE ================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +6,38 @@
     outline: none;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: sans-serif;
     background-color: #f7f7f9;
     color: #202020;
+
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+
+header,
+.seg-titulo,
+.conteudo-lado-a-lado {
+    flex-shrink: 0;
+}
+
+.conteudo-lado-a-lado {
+    flex: 1 0 auto;
+}
+
+footer,
+.Footer {
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
 
 header {
     background-color: #570505;
@@ -31,8 +58,7 @@ header .titulo h1 {
 }
 
 header .link-pagAtleta {
-    color: #fff;
-    left: 70px;
+    color: #eddf24;
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 2px;
@@ -68,6 +94,7 @@ header #bnt-voltar a:hover {
     background: rgba(255, 255, 255, .2);
 }
 
+
 .seg-titulo {
     text-align: center;
     margin: 40px 0 25px;
@@ -78,6 +105,7 @@ header #bnt-voltar a:hover {
     font-size: 28px;
     letter-spacing: 1px;
 }
+
 
 .conteudo-lado-a-lado {
     display: flex;
@@ -103,6 +131,7 @@ header #bnt-voltar a:hover {
     color: #333;
 }
 
+/* ================= CARROSSEL ================= */
 .carrossel-container {
     position: relative;
     flex: 1 1 50%;
@@ -144,22 +173,79 @@ header #bnt-voltar a:hover {
     background: rgba(0, 0, 0, .8);
 }
 
-#prevBtn {
-    left: 10px;
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #570505;
+    color: #fff;
+    padding: 40px 7% 20px;
+    font-family: sans-serif;
 }
 
-#nextBtn {
-    right: 10px;
+.Footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+.Footer-coluna {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.Footer-coluna h2,
+.Footer-coluna h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.Footer-coluna p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.Footer-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Footer-coluna li {
+    margin-bottom: 8px;
+}
+
+.Footer-coluna li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    transition: opacity .2s, color .2s;
+}
+
+.Footer-coluna li a:hover {
+    opacity: 1;
+    color: #67706c;
+}
+
+.Footer-base {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* ================= ANIMAÇÃO ================= */
 @keyframes fade {
-    from {
-        opacity: .4;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: .4; }
+    to   { opacity: 1; }
 }
 
 /* ================= TABLET ================= */
@@ -197,9 +283,7 @@ header #bnt-voltar a:hover {
         order: -1;
     }
 
-    header .titulo h1 {
-        font-size: 20px;
-    }
+    header .titulo h1 { font-size: 20px; }
 
     header .link-pagAtleta,
     header #bnt-voltar a {
@@ -207,13 +291,8 @@ header #bnt-voltar a:hover {
         padding: 6px 10px;
     }
 
-    .seg-titulo {
-        margin: 25px 0 15px;
-    }
-
-    .seg-titulo h2 {
-        font-size: 22px;
-    }
+    .seg-titulo { margin: 25px 0 15px; }
+    .seg-titulo h2 { font-size: 22px; }
 
     .conteudo-lado-a-lado {
         flex-direction: column;
@@ -222,138 +301,57 @@ header #bnt-voltar a:hover {
         margin-bottom: 40px;
     }
 
-    .resumoHistoria {
-        padding: 18px;
-        font-size: 14px;
-    }
+    .resumoHistoria { padding: 18px; font-size: 14px; }
+    .resumoHistoria p { font-size: 14px; line-height: 1.6; }
 
-    .resumoHistoria p {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    .carrossels img {
-        height: 280px;
-    }
+    .carrossels img { height: 280px; }
 
     #bnt-carrossel button {
         padding: 8px 12px;
         font-size: 14px;
     }
+
+    /* Footer empilhado no celular */
+    .Footer { padding: 40px 5% 20px; }
+    .Footer-conteudo { flex-direction: column; gap: 25px; }
 }
 
 /* ================= CELULAR PEQUENO ================= */
 @media (max-width: 480px) {
-    .resumoHistoria p {
-        font-size: 13px;
-    }
-
-    .seg-titulo h2 {
-        font-size: 20px;
-    }
-
-    .carrossels img {
-        height: 220px;
-    }
+    .resumoHistoria p { font-size: 13px; }
+    .seg-titulo h2 { font-size: 20px; }
+    .carrossels img { height: 220px; }
 }
 
 /* ================= TELAS GRANDES ================= */
 @media (min-width: 1440px) {
-    header .titulo h1 {
-        font-size: 32px;
-    }
-
+    header .titulo h1 { font-size: 32px; }
     header .link-pagAtleta,
-    header #bnt-voltar a {
-        font-size: 22px;
-    }
-
-    header .logo {
-        max-width: 140px;
-    }
-
-    .seg-titulo h2 {
-        font-size: 34px;
-    }
-
-    .conteudo-lado-a-lado {
-        max-width: 1500px;
-        gap: 60px;
-    }
-
-    .resumoHistoria p {
-        font-size: 19px;
-        line-height: 1.85;
-    }
-
-    .carrossels img {
-        height: 600px;
-    }
+    header #bnt-voltar a { font-size: 22px; }
+    header .logo { max-width: 140px; }
+    .seg-titulo h2 { font-size: 34px; }
+    .conteudo-lado-a-lado { max-width: 1500px; gap: 60px; }
+    .resumoHistoria p { font-size: 19px; line-height: 1.85; }
+    .carrossels img { height: 600px; }
 }
 
 @media (min-width: 2560px) {
-    header .titulo h1 {
-        font-size: 40px;
-    }
-
-    .conteudo-lado-a-lado {
-        max-width: 2100px;
-    }
-
-    .resumoHistoria p {
-        font-size: 24px;
-    }
-
-    .carrossels img {
-        height: 850px;
-    }
+    header .titulo h1 { font-size: 40px; }
+    .conteudo-lado-a-lado { max-width: 2100px; }
+    .resumoHistoria p { font-size: 24px; }
+    .carrossels img { height: 850px; }
 }
 
-/* ================= ULTRA-WIDE (3000px+) ================= */
 @media (min-width: 3000px) {
-    header {
-        padding: 30px 80px;
-    }
-
-    header .titulo h1 {
-        font-size: 60px;
-    }
-
+    header { padding: 30px 80px; }
+    header .titulo h1 { font-size: 60px; }
     header .link-pagAtleta,
-    header #bnt-voltar a {
-        font-size: 40px;
-        padding: 15px 30px;
-    }
-
-    header .logo {
-        max-width: 220px;
-    }
-
-    .seg-titulo h2 {
-        font-size: 70px;
-    }
-
-    .conteudo-lado-a-lado {
-        max-width: 2600px;
-        gap: 80px;
-    }
-
-    .resumoHistoria {
-        padding: 60px;
-        border-radius: 24px;
-    }
-
-    .resumoHistoria p {
-        font-size: 34px;
-        line-height: 2;
-    }
-
-    .carrossels img {
-        height: 1200px;
-    }
-
-    #bnt-carrossel button {
-        padding: 24px 30px;
-        font-size: 40px;
-    }
+    header #bnt-voltar a { font-size: 40px; padding: 15px 30px; }
+    header .logo { max-width: 220px; }
+    .seg-titulo h2 { font-size: 70px; }
+    .conteudo-lado-a-lado { max-width: 2600px; gap: 80px; }
+    .resumoHistoria { padding: 60px; border-radius: 24px; }
+    .resumoHistoria p { font-size: 34px; line-height: 2; }
+    .carrossels img { height: 1200px; }
+    #bnt-carrossel button { padding: 24px 30px; font-size: 40px; }
 }

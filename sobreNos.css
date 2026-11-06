@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: #570505;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    min-height: 16vh;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header #bnt-voltar a {
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px black;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 18px;
+    transition: background 0.3s;
+    border-radius: 4px;
+}
+
+header #bnt-voltar a:hover {
+    background-color: gray;
+}
+
+
+
+#pesquisa {
+    width: 250px;
+    max-width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.logo {
+    width: 8%;
+    max-width: 130px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+header button,
+.bnt-login {
+    font-family: Optima, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 20px;
+    border: 5px solid #fff;
+    background-color: #570505;
+    letter-spacing: 2.5px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+header button:hover,
+.bnt-login:hover {
+    background-color: #c91818;
+}
+
+header button a,
+.bnt-login a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#login {
+    width: 30px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.bloco-esportes {
+    background-color: #570505;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloco-esportes ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 180px;
+    padding: 0;
+    margin: 0;
+}
+
+.bloco-esportes li a {
+    text-decoration: none;
+    padding: 5px 15px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #fff;
+    transition: color .2s;
+}
+
+.bloco-esportes li a:hover {
+    color: #67706c;
+}
+
+
+#sobre-nos {
+    background-color:#6e2f2f;
+    color: #000;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 52em;
+    padding: 20px 0 30px;
+    font-size: 28px;
+    border-radius: 20px;
+    box-shadow: 16px 14px 10px rgba(16, 16, 16, .354);
+}
+
+#sobre-nos h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    background-image: linear-gradient(45deg, #fff, #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#sobre-nos p {
+    padding: 15px 30px;
+    font-size: .7em;
+    line-height: 1.6;
+    color: #fff;
+}
+
+
+
+
+footer {
+    background-color: #570505;
+    color: #fff;
+    padding: 20px 7% 20px;
+    font-family: sans-serif;
+}
+
+.Footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Footer-coluna {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.Footer-coluna h2,
+.Footer-coluna h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.Footer-coluna p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.Footer-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Footer-coluna li {
+    margin-bottom: 8px;
+}
+
+.Footer-coluna li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    transition: opacity .2s, color .2s;
+}
+
+.Footer-coluna li a:hover {
+    opacity: 1;
+    color: #67706c;
+}
+
+.Footer-base {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Responsivo do footer */
+@media (max-width: 768px) {
+    .Footer {
+        padding: 40px 5% 20px;
+    }
+
+    .Footer-conteudo {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    header {
+        padding: 1rem 3%;
+        flex-wrap: nowrap;
+    }
+
+    #pesquisa {
+        width: 200px;
+    }
+
+    .bloco-esportes ul {
+        gap: 80px;
+    }
+
+    .carrossels img {
+        height: 420px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        padding: 10px 3%;
+        min-height: auto;
+        gap: 6px;
+        align-items: center;
+        text-align: left;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        max-width: 70px;
+        margin: 0;
+        order: 0;
+    }
+
+    .search-box {
+        flex: 0 0 40%;
+        min-width: 0;
+    }
+
+    #pesquisa {
+        width: 100%;
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    header button,
+    .bnt-login {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        padding: 0;
+        border-radius: 50%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    header button a,
+    .bnt-login a {
+        font-size: 0;
+        line-height: 0;
+        letter-spacing: 0;
+        gap: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #login {
+        width: 22px;
+        height: 22px;
+        display: block;
+        object-fit: contain;
+        object-position: center center;
+        margin: 0 auto;
+        flex-shrink: 0;
+        position: static;
+    }
+
+    .carrossel-container {
+        margin-top: 20px;
+    }
+
+    .carrossels img {
+        height: 280px;
+    }
+
+    #bnt-carrossel button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .bloco-esportes {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .bloco-esportes ul {
+        flex-wrap: wrap;
+        gap: 10px 25px;
+    }
+
+    .bloco-esportes li a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    #sobre-nos {
+        width: 92%;
+        font-size: 20px;
+        padding: 20px 0;
+    }
+
+    #sobre-nos h1 {
+        font-size: 1.3em;
+    }
+
+    #sobre-nos p {
+        padding: 15px 20px;
+        font-size: .75em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .search-box {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        background-color: #fff;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23570505' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: width .25s ease, flex-basis .25s ease, border-radius .25s ease;
+    }
+
+    .search-box:focus-within {
+        width: 55%;
+        flex: 1 1 55%;
+        border-radius: 8px;
+        background-image: none;
+        background-color: transparent;
+    }
+
+    #pesquisa {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        opacity: 0;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .search-box:focus-within #pesquisa {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 7px 10px;
+        border: 2px solid #000;
+        background: #fff;
+        opacity: 1;
+        cursor: text;
+    }
+
+    .logo {
+        width: 56px;
+        max-width: 56px;
+        transition: opacity .2s ease;
+    }
+
+    header:has(.search-box:focus-within) .logo {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .carrossels img {
+        height: 200px;
+    }
+
+    .bloco-esportes li a {
+        font-size: 14px;
+    }
+
+    #sobre-nos {
+        font-size: 18px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    #pesquisa {
+        width: 340px;
+        font-size: 18px;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        max-width: 140px;
+    }
+
+    header button,
+    .bnt-login {
+        padding: 16px 30px;
+    }
+
+    header button a,
+    .bnt-login a {
+        font-size: 20px;
+    }
+
+    #login {
+        width: 36px;
+        height: 30px;
+    }
+
+    .carrossels img {
+        height: 720px;
+    }
+
+    .bloco-esportes ul {
+        gap: 220px;
+    }
+
+    #sobre-nos {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 2560px) {
+    #pesquisa {
+        width: 500px;
+        font-size: 22px;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    header button,
+    .bnt-login {
+        padding: 20px 40px;
+    }
+
+    header button a,
+    .bnt-login a {
+        font-size: 26px;
+    }
+
+    .carrossels img {
+        height: 850px;
+    }
+
+    .bloco-esportes ul {
+        gap: 300px;
+    }
+
+    #sobre-nos {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 3000px) {
+    header {
+        padding: 2rem 8%;
+        min-height: 20vh;
+    }
+
+    #pesquisa {
+        width: 700px;
+        font-size: 32px;
+        padding: 20px 26px;
+    }
+
+    .logo {
+        max-width: 240px;
+    }
+
+    header button,
+    .bnt-login {
+        padding: 26px 50px;
+        border-radius: 40px;
+    }
+
+    header button a,
+    .bnt-login a {
+        font-size: 34px;
+    }
+
+    #login {
+        width: 50px;
+        height: 45px;
+    }
+
+    .carrossels img {
+        height: 1200px;
+    }
+
+    .bloco-esportes {
+        height: 100px;
+    }
+
+    .bloco-esportes ul {
+        gap: 400px;
+    }
+
+    .bloco-esportes li a {
+        font-size: 32px;
+    }
+
+    #bnt-carrossel button {
+        padding: 24px 30px;
+        font-size: 40px;
+    }
+
+    #sobre-nos {
+        font-size: 52px;
+        padding: 60px 0;
+    }
+}
