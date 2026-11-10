@@ -165,18 +165,44 @@ header button a,
 }
 
 
+/* ===== Bloco Sobre Nós (link clicável com animação) ===== */
+.sobre-nos-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 70em;
+    border-radius: 20px;
+    transition: transform .35s ease, box-shadow .35s ease, filter .35s ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
 #sobre-nos {
     background-color: rgb(230, 229, 235);
     color: #000;
-    margin: 30px auto;
-    width: 90%;
-    max-width: 52em;
     padding: 20px 0 30px;
     font-size: 28px;
     border-radius: 20px;
     box-shadow: 16px 14px 10px rgba(16, 16, 16, .354);
+    border: 2px solid transparent;
+    transition: background-color .35s ease, border-color .35s ease;
+    position: relative;
 }
 
+/* ---- Hover: elevação + sombra + escala + borda ---- */
+.sobre-nos-link:hover #sobre-nos {
+    background-color: #f5f1ff;
+    border-color: #570505;
+}
+
+.sobre-nos-link:hover {
+    transform: translateY(-8px) scale(1.015);
+    box-shadow: 0 18px 32px rgba(87, 5, 5, .35);
+}
+
+/* ---- Título animado ---- */
 #sobre-nos h1 {
     display: flex;
     justify-content: center;
@@ -185,12 +211,57 @@ header button a,
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: background-image .35s ease, letter-spacing .35s ease;
 }
 
+.sobre-nos-link:hover #sobre-nos h1 {
+    background-image: linear-gradient(45deg, #570505, #c91818);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1.5px;
+}
+
+/* ---- Texto ---- */
 #sobre-nos p {
     padding: 15px 30px;
     font-size: .7em;
     line-height: 1.6;
+}
+
+/* ---- Setinha que desliza no hover ---- */
+.sobre-nos-seta {
+    display: block;
+    text-align: center;
+    font-size: .8em;
+    color: #570505;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity .35s ease, transform .35s ease;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+.sobre-nos-link:hover .sobre-nos-seta {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ---- Acessibilidade: foco por teclado ---- */
+.sobre-nos-link:focus-visible {
+    outline: none;
+}
+
+.sobre-nos-link:focus-visible #sobre-nos {
+    outline: 3px solid #570505;
+    outline-offset: 4px;
+}
+
+/* ---- Telas touch: sem hover "preso", usa active ---- */
+@media (hover: none) {
+    .sobre-nos-link:active {
+        transform: scale(0.98);
+    }
 }
 
 
@@ -198,7 +269,7 @@ header button a,
 footer {
     background-color: #570505;
     color: #fff;
-    padding: 20px 7% 20px;
+    padding: 17.5px 7% 17.5px;
     font-family: sans-serif;
 }
 
@@ -253,7 +324,7 @@ footer {
 
 .Footer-base {
     border-top: 1px solid rgba(255, 255, 255, .2);
-    margin-top: 40px;
+    margin-top: 30px;
     padding-top: 20px;
     text-align: center;
     font-size: 0.8rem;

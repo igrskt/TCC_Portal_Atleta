@@ -131,7 +131,7 @@ header button a,
 
 
 #sobre-nos {
-    background-color:#6e2f2f;
+    background-color: #f5f1ff;
     color: #000;
     margin: 30px auto;
     width: 90%;
@@ -139,6 +139,7 @@ header button a,
     padding: 20px 0 30px;
     font-size: 28px;
     border-radius: 20px;
+    border: solid, 10px, #8a0404;
     box-shadow: 16px 14px 10px rgba(16, 16, 16, .354);
 }
 
@@ -146,7 +147,7 @@ header button a,
     display: flex;
     justify-content: center;
     padding: 10px 15px;
-    background-image: linear-gradient(45deg, #fff, #fff);
+    background-image: linear-gradient(45deg, #570505, #b90000);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -156,7 +157,7 @@ header button a,
     padding: 15px 30px;
     font-size: .7em;
     line-height: 1.6;
-    color: #fff;
+    color: #000;
 }
 
 
