@@ -160,6 +160,13 @@ header button a,
     color: #000;
 }
 
+.criadores-site{
+    justify-content: space-between;
+    display: flex;
+    flex: 1 1 400px;
+    flex-wrap: wrap;
+    
+}
 
 
 
