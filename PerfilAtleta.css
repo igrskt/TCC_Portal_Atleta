@@ -731,7 +731,7 @@ footer {
 }a
 
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
 .perfil-hero {
         grid-template-columns: 340px 1fr;
         gap: 50px;
@@ -780,7 +780,7 @@ footer {
     .info-lista li, .conquistas li {
         font-size: 17px;
     }
-
+}
 
 
 @media (min-width: 2560px) {
