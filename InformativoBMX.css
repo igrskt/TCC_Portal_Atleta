@@ -131,6 +131,7 @@ header #bnt-voltar a:hover {
     color: #333;
 }
 
+/* ================= CARROSSEL ================= */
 .carrossel-container {
     position: relative;
     flex: 1 1 50%;
@@ -175,6 +176,7 @@ header #bnt-voltar a:hover {
 #prevBtn { left: 10px; }
 #nextBtn { right: 10px; }
 
+/* ================= FOOTER ================= */
 footer {
     background-color: #570505;
     color: #fff;
@@ -240,11 +242,13 @@ footer {
     opacity: 0.8;
 }
 
+/* ================= ANIMAÇÃO ================= */
 @keyframes fade {
     from { opacity: .4; }
     to   { opacity: 1; }
 }
 
+/* ================= TABLET ================= */
 @media (max-width: 1024px) {
     .conteudo-lado-a-lado {
         gap: 25px;
@@ -260,6 +264,7 @@ footer {
     }
 }
 
+/* ================= CELULAR ================= */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -311,12 +316,14 @@ footer {
     .Footer-conteudo { flex-direction: column; gap: 25px; }
 }
 
+/* ================= CELULAR PEQUENO ================= */
 @media (max-width: 480px) {
     .resumoHistoria p { font-size: 13px; }
     .seg-titulo h2 { font-size: 20px; }
     .carrossels img { height: 220px; }
 }
 
+/* ================= TELAS GRANDES ================= */
 @media (min-width: 1440px) {
     header .titulo h1 { font-size: 32px; }
     header .link-pagAtleta,

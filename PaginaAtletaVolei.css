@@ -97,6 +97,7 @@ header #bnt-voltar a:hover {
     background-color: gray;
 }
 
+
 .menu-toggle {
     display: none;
     position: absolute;
@@ -477,7 +478,7 @@ header #bnt-voltar a:hover {
     letter-spacing: 1px;
 }
 
-
+/* ---------- Verso ---------- */
 .flip-card-back {
     transform: rotateY(180deg);
     display: flex;

@@ -165,6 +165,7 @@ header button a,
 }
 
 
+
 .sobre-nos-link {
     display: block;
     text-decoration: none;
@@ -190,6 +191,7 @@ header button a,
     position: relative;
 }
 
+
 .sobre-nos-link:hover #sobre-nos {
     background-color: #f5f1ff;
     border-color: #570505;
@@ -199,6 +201,7 @@ header button a,
     transform: translateY(-8px) scale(1.015);
     box-shadow: 0 18px 32px rgba(87, 5, 5, .35);
 }
+
 
 #sobre-nos h1 {
     display: flex;
@@ -219,11 +222,13 @@ header button a,
     letter-spacing: 1.5px;
 }
 
+/* ---- Texto ---- */
 #sobre-nos p {
     padding: 15px 30px;
     font-size: .7em;
     line-height: 1.6;
 }
+
 
 .sobre-nos-seta {
     display: block;
@@ -242,6 +247,7 @@ header button a,
     transform: translateX(0);
 }
 
+
 .sobre-nos-link:focus-visible {
     outline: none;
 }
@@ -250,6 +256,7 @@ header button a,
     outline: 3px solid #570505;
     outline-offset: 4px;
 }
+
 
 @media (hover: none) {
     .sobre-nos-link:active {
@@ -324,14 +331,15 @@ footer {
     opacity: 0.8;
 }
 
+
 @media (max-width: 768px) {
     .Footer {
-        padding: 40px 5% 20px;
+        padding: 20px 5% 15px;
     }
 
     .Footer-conteudo {
         flex-direction: column;
-        gap: 25px;
+        gap: 15px;
     }
 }
 

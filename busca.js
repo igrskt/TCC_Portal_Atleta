@@ -1,7 +1,9 @@
 (function () {
   "use strict";
 
+  /* ============ ÍNDICE DE PÁGINAS ============ */
   var INDEX = [
+    /* ---- Informativos (história) ---- */
     {
       titulo: "História do Skate",
       tipo: "Informativo",
@@ -236,6 +238,7 @@
     document.head.appendChild(s);
   }
 
+  /* ============ MOTOR DE BUSCA ============ */
   function buscar(query) {
     var q = normalizar(query).trim();
     if (!q) return [];
@@ -253,6 +256,7 @@
     return achados;
   }
 
+  /* ============ UI ============ */
   function iniciar() {
     var input = document.getElementById("pesquisa");
     if (!input) return;
@@ -336,6 +340,7 @@
       abrir();
     }
 
+    /* ============ EVENTOS ============ */
     input.addEventListener("input", function () {
       render(buscar(input.value));
     });
@@ -381,6 +386,7 @@
     });
   }
 
+  /* ============ BOOT ============ */
   injetarCSS();
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", iniciar);
