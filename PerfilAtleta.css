@@ -121,13 +121,11 @@ header #bnt-voltar a:hover {
     color: var(--primary-dark);
 }
 
-/* ================= LAYOUT ================= */
 .main {
     width: 100%;
     padding: 40px 5% 60px;
 }
 
-/* ================= HERO ================= */
 .perfil-hero {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -418,7 +416,6 @@ footer {
 }
 
 
-/* ================= BLOCOS ================= */
 .perfil-grid {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
@@ -533,7 +530,6 @@ footer {
     transform: translateY(0);
 }
 
-/* ================= TABLET ================= */
 @media (max-width: 1024px) {
     header {
         flex-wrap: nowrap;
@@ -566,7 +562,6 @@ footer {
     }
 }
 
-/* ================= CELULAR ================= */
 @media (max-width: 768px) {
     header {
         flex-wrap: nowrap;
@@ -660,7 +655,6 @@ footer {
     }
 }
 
-/* ================= CELULAR PEQUENO ================= */
 @media (max-width: 480px) {
     header {
         padding: 8px 3%;
@@ -737,8 +731,8 @@ footer {
 }a
 
 
-@media (min-width: 1440px) {
-    .perfil-hero {
+@media (min-width: 1440px) {}
+.perfil-hero {
         grid-template-columns: 340px 1fr;
         gap: 50px;
         padding: 40px;
@@ -786,7 +780,7 @@ footer {
     .info-lista li, .conquistas li {
         font-size: 17px;
     }
-}
+
 
 
 @media (min-width: 2560px) {
@@ -851,8 +845,8 @@ footer {
 
     .stats-grid {
         gap: 30px;
-333        margin-top: 34px;
-    }
+333     margin-top: 34px;
+ }
 
     .stat-card {
         padding: 32px 20px;

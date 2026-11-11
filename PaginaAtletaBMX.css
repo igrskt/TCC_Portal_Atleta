@@ -478,7 +478,6 @@ header #bnt-voltar a:hover {
     letter-spacing: 1px;
 }
 
-/* ---------- Verso ---------- */
 .flip-card-back {
     transform: rotateY(180deg);
     display: flex;

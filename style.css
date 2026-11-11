@@ -165,7 +165,6 @@ header button a,
 }
 
 
-/* ===== Bloco Sobre Nós (link clicável com animação) ===== */
 .sobre-nos-link {
     display: block;
     text-decoration: none;
@@ -191,7 +190,6 @@ header button a,
     position: relative;
 }
 
-/* ---- Hover: elevação + sombra + escala + borda ---- */
 .sobre-nos-link:hover #sobre-nos {
     background-color: #f5f1ff;
     border-color: #570505;
@@ -202,7 +200,6 @@ header button a,
     box-shadow: 0 18px 32px rgba(87, 5, 5, .35);
 }
 
-/* ---- Título animado ---- */
 #sobre-nos h1 {
     display: flex;
     justify-content: center;
@@ -222,14 +219,12 @@ header button a,
     letter-spacing: 1.5px;
 }
 
-/* ---- Texto ---- */
 #sobre-nos p {
     padding: 15px 30px;
     font-size: .7em;
     line-height: 1.6;
 }
 
-/* ---- Setinha que desliza no hover ---- */
 .sobre-nos-seta {
     display: block;
     text-align: center;
@@ -247,7 +242,6 @@ header button a,
     transform: translateX(0);
 }
 
-/* ---- Acessibilidade: foco por teclado ---- */
 .sobre-nos-link:focus-visible {
     outline: none;
 }
@@ -257,7 +251,6 @@ header button a,
     outline-offset: 4px;
 }
 
-/* ---- Telas touch: sem hover "preso", usa active ---- */
 @media (hover: none) {
     .sobre-nos-link:active {
         transform: scale(0.98);
@@ -331,7 +324,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Responsivo do footer */
 @media (max-width: 768px) {
     .Footer {
         padding: 40px 5% 20px;
