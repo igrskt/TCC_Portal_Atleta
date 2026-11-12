@@ -189,7 +189,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-/* ====== Sidebar ====== */
+
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('sidebarOverlay');
 const menuToggle = document.getElementById('menuToggle');
@@ -211,7 +211,7 @@ openFilters.addEventListener('click', e => { e.preventDefault(); abrirSidebar();
 closeBtn.addEventListener('click', fecharSidebar);
 overlay.addEventListener('click', fecharSidebar);
 
-/* ====== Collapse ====== */
+
 function toggleFilter(el) {
     const content = el.nextElementSibling;
     const arrow = el.querySelector('.arrow');
@@ -219,7 +219,7 @@ function toggleFilter(el) {
     arrow.classList.toggle('rotate');
 }
 
-/* ====== Flip ====== */
+
 document.querySelectorAll('.flip-card').forEach(card => {
     card.addEventListener('click', e => {
         if (e.target.closest('.btn')) return;
@@ -227,7 +227,7 @@ document.querySelectorAll('.flip-card').forEach(card => {
     });
 });
 
-/* ====== Filtros ====== */
+
 const estado = {};
 const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"][data-filtro]');
 
@@ -280,7 +280,7 @@ function atualizarContadores() {
     });
 }
 
-/* ====== Limpar ====== */
+
 function limparFiltros() {
     checkboxes.forEach(cb => {
         cb.checked = false;
@@ -291,7 +291,7 @@ function limparFiltros() {
     showToast('Filtros limpos!');
 }
 
-/* ====== Toast ====== */
+
 let toastTimer;
 function showToast(msg) {
     const toast = document.getElementById('toast');
@@ -301,11 +301,11 @@ function showToast(msg) {
     toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
 }
 
-/* ====== Atalhos ====== */
+
 document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharSidebar(); });
 window.addEventListener('resize', () => { if (window.innerWidth > 900) fecharSidebar(); });
 
-/* ====== Init ====== */
+
 document.addEventListener('DOMContentLoaded', () => {
     atualizarContadores();
     aplicarFiltros();
