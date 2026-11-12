@@ -106,13 +106,11 @@ form {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ================= TABLET ================= */
 @media (max-width: 1024px) {
     .form { padding: 32px; }
     .title { font-size: 1.4em; }
 }
 
-/* ================= CELULAR ================= */
 @media (max-width: 768px) {
     body { padding: 80px 14px 30px; }
     #bnt-voltar { top: 12px; left: 12px; }
@@ -123,7 +121,6 @@ form {
     .btn-2 button { height: 55px; font-size: 1em; }
 }
 
-/* ================= CELULAR PEQUENO ================= */
 @media (max-width: 480px) {
     .form { padding: 22px 16px; }
     .title { font-size: 1.05em; padding: 6px 10px; }
@@ -131,7 +128,6 @@ form {
     .btn-2 button { height: 50px; font-size: .95em; }
 }
 
-/* ================= TELAS GRANDES ================= */
 @media (min-width: 1440px) {
     .form { padding: 55px; width: min(90vw, 480px); }
     .title { font-size: 1.8em; }
