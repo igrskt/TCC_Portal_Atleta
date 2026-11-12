@@ -26,19 +26,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btnContato = document.getElementById("btnContato");
-  const toast = document.getElementById("toast");
 
-  if (btnContato && toast) {
-    btnContato.addEventListener("click", function () {
-      const nomeAtleta = this.getAttribute("data-nome");
-      toast.textContent = `Entrando em contato com ${nomeAtleta}...`;
-      toast.classList.add("show");
-
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 3000);
-    });
-  }
-});
