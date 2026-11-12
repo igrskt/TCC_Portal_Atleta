@@ -121,13 +121,13 @@ header #bnt-voltar a:hover {
     color: var(--primary-dark);
 }
 
-/* ================= LAYOUT ================= */
+
 .main {
     width: 100%;
     padding: 40px 5% 60px;
 }
 
-/* ================= HERO ================= */
+
 .perfil-hero {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -418,7 +418,7 @@ footer {
 }
 
 
-/* ================= BLOCOS ================= */
+
 .perfil-grid {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
@@ -533,7 +533,7 @@ footer {
     transform: translateY(0);
 }
 
-/* ================= TABLET ================= */
+
 @media (max-width: 1024px) {
     header {
         flex-wrap: nowrap;
@@ -566,7 +566,7 @@ footer {
     }
 }
 
-/* ================= CELULAR ================= */
+
 @media (max-width: 768px) {
     header {
         flex-wrap: nowrap;
@@ -660,7 +660,7 @@ footer {
     }
 }
 
-/* ================= CELULAR PEQUENO ================= */
+
 @media (max-width: 480px) {
     header {
         padding: 8px 3%;
