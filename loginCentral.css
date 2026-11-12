@@ -17,7 +17,7 @@ body {
     padding: 90px 16px 40px;
 }
 
-/* Botão voltar - agora fixado no canto, sempre visível */
+
 #bnt-voltar {
     position: fixed;
     top: 20px;
